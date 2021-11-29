@@ -1,5 +1,213 @@
 [
     {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpRequest",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -65,54 +273,6 @@
         "documentation": {}
     },
     {
-        "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "reverse",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -127,30 +287,6 @@
         "importPath": "django.db.models.deletion",
         "description": "django.db.models.deletion",
         "detail": "django.db.models.deletion",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -210,38 +346,6 @@
         "documentation": {}
     },
     {
-        "label": "Category",
-        "importPath": "store.models",
-        "description": "store.models",
-        "isExtraImport": true,
-        "detail": "store.models",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "store.models",
-        "description": "store.models",
-        "isExtraImport": true,
-        "detail": "store.models",
-        "documentation": {}
-    },
-    {
-        "label": "Category",
-        "importPath": "store.models",
-        "description": "store.models",
-        "isExtraImport": true,
-        "detail": "store.models",
-        "documentation": {}
-    },
-    {
-        "label": "Product",
-        "importPath": "store.models",
-        "description": "store.models",
-        "isExtraImport": true,
-        "detail": "store.models",
-        "documentation": {}
-    },
-    {
         "label": "skip",
         "importPath": "unittest",
         "description": "unittest",
@@ -250,43 +354,11 @@
         "documentation": {}
     },
     {
-        "label": "HttpRequest",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
-        "label": "all_products",
+        "label": "product_all",
         "importPath": "store.views",
         "description": "store.views",
         "isExtraImport": true,
         "detail": "store.views",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
-        "documentation": {}
-    },
-    {
-        "label": "get_object_or_404",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -313,6 +385,87 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "BasketConfig",
+        "kind": 6,
+        "importPath": "basket.apps",
+        "description": "basket.apps",
+        "peekOfCode": "class BasketConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'basket'",
+        "detail": "basket.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Basket",
+        "kind": 6,
+        "importPath": "basket.basket",
+        "description": "basket.basket",
+        "peekOfCode": "class Basket:\n    \"\"\"\n    A base Basket class, providing some default behaviors that\n    can be inherited or overridden, as necessary.\n    \"\"\"\n    def __init__(self, request):\n        self.session = request.session\n        basket = self.session.get(\"skey\")\n        if \"skey\" not in request.session:\n            basket = self.session[\"skey\"] = {}",
+        "detail": "basket.basket",
+        "documentation": {}
+    },
+    {
+        "label": "basket",
+        "kind": 2,
+        "importPath": "basket.context_processors",
+        "description": "basket.context_processors",
+        "peekOfCode": "def basket(request):\n    return {\"basket\": Basket(request)}",
+        "detail": "basket.context_processors",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "basket.urls",
+        "description": "basket.urls",
+        "peekOfCode": "app_name = \"basket\"\nurlpatterns = [\n    path(\"\", views.basket_summary, name=\"basket_summary\"),\n    path(\"add/\", views.basket_add, name=\"basket_add\"),\n    path(\"delete/\", views.basket_delete, name=\"basket_delete\"),\n    path(\"update/\", views.basket_update, name=\"basket_update\"),\n]",
+        "detail": "basket.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "basket.urls",
+        "description": "basket.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.basket_summary, name=\"basket_summary\"),\n    path(\"add/\", views.basket_add, name=\"basket_add\"),\n    path(\"delete/\", views.basket_delete, name=\"basket_delete\"),\n    path(\"update/\", views.basket_update, name=\"basket_update\"),\n]",
+        "detail": "basket.urls",
+        "documentation": {}
+    },
+    {
+        "label": "basket_summary",
+        "kind": 2,
+        "importPath": "basket.views",
+        "description": "basket.views",
+        "peekOfCode": "def basket_summary(request):\n    basket = Basket(request)\n    return render(request, \"basket/basket_summary.html\", {\"basket\": basket})\ndef basket_add(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        product_id = int(request.POST.get(\"productid\"))\n        product_qty = int(request.POST.get(\"productqty\"))\n        product = get_object_or_404(Product, id=product_id)\n        basket.add(product=product, qty=product_qty)",
+        "detail": "basket.views",
+        "documentation": {}
+    },
+    {
+        "label": "basket_add",
+        "kind": 2,
+        "importPath": "basket.views",
+        "description": "basket.views",
+        "peekOfCode": "def basket_add(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        product_id = int(request.POST.get(\"productid\"))\n        product_qty = int(request.POST.get(\"productqty\"))\n        product = get_object_or_404(Product, id=product_id)\n        basket.add(product=product, qty=product_qty)\n        basketqty = basket.__len__()\n        return JsonResponse({\"qty\": basketqty})\ndef basket_delete(request):",
+        "detail": "basket.views",
+        "documentation": {}
+    },
+    {
+        "label": "basket_delete",
+        "kind": 2,
+        "importPath": "basket.views",
+        "description": "basket.views",
+        "peekOfCode": "def basket_delete(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        product_id = int(request.POST.get(\"productid\"))\n        basket.delete(product=product_id)\n        basketqty = basket.__len__()\n        baskettotal = basket.get_total_price()\n        return JsonResponse({\"qty\": basketqty, \"subtotal\": baskettotal})\ndef basket_update(request):\n    basket = Basket(request)",
+        "detail": "basket.views",
+        "documentation": {}
+    },
+    {
+        "label": "basket_update",
+        "kind": 2,
+        "importPath": "basket.views",
+        "description": "basket.views",
+        "peekOfCode": "def basket_update(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        product_id = int(request.POST.get(\"productid\"))\n        product_qty = int(request.POST.get(\"productqty\"))\n        basket.update(product=product_id, qty=product_qty)\n        basketqty = basket.__len__()\n        baskettotal = basket.get_total_price()\n        return JsonResponse({\"qty\": basketqty, \"subtotal\": baskettotal})",
+        "detail": "basket.views",
         "documentation": {}
     },
     {
@@ -365,7 +518,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"store\",\n]\nMIDDLEWARE = [",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"store\",\n    \"basket\",\n]",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -428,7 +581,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -437,7 +590,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "TIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type",
+        "peekOfCode": "TIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -446,7 +599,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -455,7 +608,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -464,7 +617,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -473,7 +626,16 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "STATIC_URL = \"/static/\"\nMEDIA_URL = \"media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -482,7 +644,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "MEDIA_URL = \"media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -509,7 +671,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"store.urls\", namespace=\"store\")),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"store.urls\", namespace=\"store\")),\n    path(\"basket/\", include(\"basket.urls\", namespace=\"basket\")),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -595,11 +757,20 @@
         "documentation": {}
     },
     {
+        "label": "categories",
+        "kind": 2,
+        "importPath": "store.context_processors",
+        "description": "store.context_processors",
+        "peekOfCode": "def categories(request):\n    return {\"categories\": Category.objects.all()}",
+        "detail": "store.context_processors",
+        "documentation": {}
+    },
+    {
         "label": "ProductManager",
         "kind": 6,
         "importPath": "store.models",
         "description": "store.models",
-        "peekOfCode": "class ProductManager(models.Manager):\n    def get_queryset(self):\n        return super(ProductManager, self).get_queryset().filter(is_active=True)\nclass Category(models.Model):\n    name = models.CharField(max_length=255, db_index=True)\n    slug = models.SlugField(max_length=255, unique=True)\n    class Meta:\n        verbose_name_plural = \"categories\"\n    def get_absolute_url(self):\n        return reverse(\"store:category_list\", args=[self.slug])",
+        "peekOfCode": "class ProductManager(models.Manager):\n    def get_queryset(self):\n        return (\n            super(ProductManager, self)\n            .get_queryset()\n            .filter(is_active=True, in_stock=True)\n        )\nclass Category(models.Model):\n    name = models.CharField(max_length=255, db_index=True)\n    slug = models.SlugField(max_length=255, unique=True)",
         "detail": "store.models",
         "documentation": {}
     },
@@ -626,7 +797,7 @@
         "kind": 5,
         "importPath": "store.urls",
         "description": "store.urls",
-        "peekOfCode": "app_name = \"store\"\nurlpatterns = [\n    path(\"\", views.all_products, name=\"all_products\"),\n    path(\"item/<slug:slug>/\", views.product_detail, name=\"product_detail\"),\n    path(\"search/<slug:category_slug>/\", views.category_list, name=\"category_list\"),\n]",
+        "peekOfCode": "app_name = \"store\"\nurlpatterns = [\n    path(\"\", views.product_all, name=\"product_all\"),\n    path(\"<slug:slug>\", views.product_detail, name=\"product_detail\"),\n    path(\"shop/<slug:category_slug>/\", views.category_list, name=\"category_list\"),\n]",
         "detail": "store.urls",
         "documentation": {}
     },
@@ -635,17 +806,8 @@
         "kind": 5,
         "importPath": "store.urls",
         "description": "store.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"\", views.all_products, name=\"all_products\"),\n    path(\"item/<slug:slug>/\", views.product_detail, name=\"product_detail\"),\n    path(\"search/<slug:category_slug>/\", views.category_list, name=\"category_list\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.product_all, name=\"product_all\"),\n    path(\"<slug:slug>\", views.product_detail, name=\"product_detail\"),\n    path(\"shop/<slug:category_slug>/\", views.category_list, name=\"category_list\"),\n]",
         "detail": "store.urls",
-        "documentation": {}
-    },
-    {
-        "label": "categories",
-        "kind": 2,
-        "importPath": "store.views",
-        "description": "store.views",
-        "peekOfCode": "def categories(request):\n    return {\"categories\": Category.objects.all()}\ndef category_list(request, category_slug=None):\n    category = get_object_or_404(Category, slug=category_slug)\n    products = Product.objects.filter(category=category)\n    return render(\n        request,\n        \"store/category.html\",\n        {\"category\": category, \"products\": products},\n    )",
-        "detail": "store.views",
         "documentation": {}
     },
     {
@@ -653,16 +815,16 @@
         "kind": 2,
         "importPath": "store.views",
         "description": "store.views",
-        "peekOfCode": "def category_list(request, category_slug=None):\n    category = get_object_or_404(Category, slug=category_slug)\n    products = Product.objects.filter(category=category)\n    return render(\n        request,\n        \"store/category.html\",\n        {\"category\": category, \"products\": products},\n    )\ndef all_products(request):\n    products = Product.objects.all()",
+        "peekOfCode": "def category_list(request, category_slug=None):\n    category = get_object_or_404(Category, slug=category_slug)\n    products = Product.objects.filter(category=category)\n    return render(\n        request,\n        \"store/category.html\",\n        {\"category\": category, \"products\": products},\n    )\ndef product_all(request):\n    products = Product.products.all()",
         "detail": "store.views",
         "documentation": {}
     },
     {
-        "label": "all_products",
+        "label": "product_all",
         "kind": 2,
         "importPath": "store.views",
         "description": "store.views",
-        "peekOfCode": "def all_products(request):\n    products = Product.objects.all()\n    return render(request, \"store/home.html\", {\"products\": products})\ndef product_detail(request, slug):\n    product = get_object_or_404(Product, slug=slug, in_stock=True)\n    return render(request, \"store/product_detail.html\", {\"product\": product})",
+        "peekOfCode": "def product_all(request):\n    products = Product.products.all()\n    return render(request, \"store/home.html\", {\"products\": products})\ndef product_detail(request, slug):\n    product = get_object_or_404(Product, slug=slug, in_stock=True)\n    return render(request, \"store/product_detail.html\", {\"product\": product})",
         "detail": "store.views",
         "documentation": {}
     },

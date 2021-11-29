@@ -1,0 +1,48 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">MyStore</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Product List
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'store:product_all' %}">All</a></li>
+              {% for c in categories %}
+              <li {% if category.slug == c.slug %}class="selected" {% endif %}>
+                <a class="dropdown-item" href="{{ c.get_absolute_url }}">{{ c.name|title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+        <a type="button" role="button" href="{% url 'basket:basket_summary' %}" class="btn btn-outline-secondary">
+          <i class="fas fa-shopping-basket fa-lg"></i>
+            {% with total_qty=basket|length %}
+            <div id="basket-qty" class="d-inline-flex">
+                {% if total_qty > 0 %}
+                    {{ total_qty }}
+                {% else %}
+                    0
+                {% endif %}
+            </div>
+            {% endwith %} 
+            <br>
+        {% if basket %}
+        £{{basket.get_total_price}}
+        {% else %}
+        Basket
+        {% endif %}
+          
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
