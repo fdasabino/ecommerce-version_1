@@ -1,106 +1,74 @@
 [
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
         "isExtraImport": true,
-        "detail": "django.apps",
+        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
         "isExtraImport": true,
-        "detail": "django.apps",
+        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
-        "label": "Decimal",
-        "importPath": "decimal",
-        "description": "decimal",
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
         "isExtraImport": true,
-        "detail": "decimal",
+        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
-        "label": "Product",
-        "importPath": "store.models",
-        "description": "store.models",
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
         "isExtraImport": true,
-        "detail": "store.models",
+        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
-        "label": "Product",
-        "importPath": "store.models",
-        "description": "store.models",
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
         "isExtraImport": true,
-        "detail": "store.models",
+        "detail": "django.test",
         "documentation": {}
     },
     {
-        "label": "Category",
-        "importPath": "store.models",
-        "description": "store.models",
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
         "isExtraImport": true,
-        "detail": "store.models",
+        "detail": "django.test",
         "documentation": {}
     },
     {
-        "label": "Product",
-        "importPath": "store.models",
-        "description": "store.models",
+        "label": "Client",
+        "importPath": "django.test",
+        "description": "django.test",
         "isExtraImport": true,
-        "detail": "store.models",
+        "detail": "django.test",
         "documentation": {}
     },
     {
-        "label": "Category",
-        "importPath": "store.models",
-        "description": "store.models",
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
         "isExtraImport": true,
-        "detail": "store.models",
+        "detail": "django.test",
         "documentation": {}
     },
     {
-        "label": "Product",
-        "importPath": "store.models",
-        "description": "store.models",
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
         "isExtraImport": true,
-        "detail": "store.models",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -157,6 +125,126 @@
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
         "documentation": {}
     },
     {
@@ -249,6 +337,14 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "static",
         "importPath": "django.conf.urls.static",
         "description": "django.conf.urls.static",
@@ -290,59 +386,11 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
+        "label": "import_module",
+        "importPath": "importlib",
+        "description": "importlib",
         "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "Client",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "RequestFactory",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
+        "detail": "importlib",
         "documentation": {}
     },
     {
@@ -388,6 +436,15 @@
         "documentation": {}
     },
     {
+        "label": "TestBasketView",
+        "kind": 6,
+        "importPath": "basket.tests.test_views",
+        "description": "basket.tests.test_views",
+        "peekOfCode": "class TestBasketView(TestCase):\n    def setUp(self):\n        User.objects.create(username=\"admin\")\n        Category.objects.create(name=\"django\", slug=\"django-beginners\")\n        Product.objects.create(\n            category_id=1,\n            title=\"django beginners\",\n            created_by_id=1,\n            slug=\"django-beginners\",\n            price=\"20.00\",",
+        "detail": "basket.tests.test_views",
+        "documentation": {}
+    },
+    {
         "label": "BasketConfig",
         "kind": 6,
         "importPath": "basket.apps",
@@ -401,7 +458,7 @@
         "kind": 6,
         "importPath": "basket.basket",
         "description": "basket.basket",
-        "peekOfCode": "class Basket:\n    \"\"\"\n    A base Basket class, providing some default behaviors that\n    can be inherited or overridden, as necessary.\n    \"\"\"\n    def __init__(self, request):\n        self.session = request.session\n        basket = self.session.get(\"skey\")\n        if \"skey\" not in request.session:\n            basket = self.session[\"skey\"] = {}",
+        "peekOfCode": "class Basket:\n    \"\"\"\n    A base Basket class, providing some default behaviors that\n    can be inherited or overridden, as necessary.\n    \"\"\"\n    def save(self):\n        self.session.modified = True\n    def __init__(self, request):\n        self.session = request.session\n        basket = self.session.get(\"skey\")",
         "detail": "basket.basket",
         "documentation": {}
     },
@@ -716,7 +773,7 @@
         "kind": 6,
         "importPath": "store.tests.test_views",
         "description": "store.tests.test_views",
-        "peekOfCode": "class TestSkip(TestCase):\n    def test_skip_example(self):\n        pass\nclass TestViewResponses(TestCase):\n    def setUp(self):\n        self.c = Client()\n        self.factory = RequestFactory()\n        User.objects.create(username=\"admin\")\n        Category.objects.create(name=\"django\", slug=\"django\")\n        Product.objects.create(",
+        "peekOfCode": "class TestSkip(TestCase):\n    def test_skip_example(self):\n        pass\nclass TestViewResponses(TestCase):\n    def setUp(self):\n        self.c = Client()\n        User.objects.create(username=\"admin\")\n        Category.objects.create(name=\"django\", slug=\"django\")\n        Product.objects.create(\n            category_id=1,",
         "detail": "store.tests.test_views",
         "documentation": {}
     },
@@ -725,7 +782,7 @@
         "kind": 6,
         "importPath": "store.tests.test_views",
         "description": "store.tests.test_views",
-        "peekOfCode": "class TestViewResponses(TestCase):\n    def setUp(self):\n        self.c = Client()\n        self.factory = RequestFactory()\n        User.objects.create(username=\"admin\")\n        Category.objects.create(name=\"django\", slug=\"django\")\n        Product.objects.create(\n            category_id=1,\n            title=\"django beginners\",\n            created_by_id=1,",
+        "peekOfCode": "class TestViewResponses(TestCase):\n    def setUp(self):\n        self.c = Client()\n        User.objects.create(username=\"admin\")\n        Category.objects.create(name=\"django\", slug=\"django\")\n        Product.objects.create(\n            category_id=1,\n            title=\"django beginners\",\n            created_by_id=1,\n            slug=\"django-beginners\",",
         "detail": "store.tests.test_views",
         "documentation": {}
     },

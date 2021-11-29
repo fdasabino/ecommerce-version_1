@@ -9,6 +9,9 @@ class Basket:
     can be inherited or overridden, as necessary.
     """
 
+    def save(self):
+        self.session.modified = True
+
     def __init__(self, request):
         self.session = request.session
         basket = self.session.get("skey")
@@ -76,6 +79,3 @@ class Basket:
             del self.basket[product_id]
             print(product_id)
             self.save()
-
-    def save(self):
-        self.session.modified = True
