@@ -31,7 +31,6 @@ class UserLoginForm(AuthenticationForm):
 
 
 class RegistrationForm(forms.ModelForm):
-
     user_name = forms.CharField(
         label="Full Name",
         min_length=4,
@@ -60,11 +59,7 @@ class RegistrationForm(forms.ModelForm):
         )
 
     def clean_user_name(self):
-        user_name = self.cleaned_data["user_name"]
-        r = UserBase.objects.filter(user_name=user_name)
-        if r.count():
-            raise forms.ValidationError("Username already exists")
-        return user_name
+        return self.cleaned_data["user_name"]
 
     def clean_password2(self):
         cd = self.cleaned_data

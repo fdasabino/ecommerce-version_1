@@ -6,6 +6,7 @@ from django.shortcuts import redirect, render
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
+from django.contrib import messages
 
 # from orders.views import user_orders
 
@@ -17,6 +18,7 @@ from .tokens import account_activation_token
 @login_required
 def dashboard(request):
     # orders = user_orders(request)
+    messages.add_message(request, messages.INFO, "Welcome to your dashboard")
     return render(request, "account/user/dashboard.html", {"section": "profile"})
 
 
@@ -26,6 +28,9 @@ def edit_details(request):
         user_form = UserEditForm(instance=request.user, data=request.POST)
 
         if user_form.is_valid():
+            messages.add_message(
+                request, messages.SUCCESS, "Details updated successfully"
+            )
             user_form.save()
     else:
         user_form = UserEditForm(instance=request.user)
@@ -39,6 +44,7 @@ def delete_user(request):
     user.is_active = False
     user.save()
     logout(request)
+    messages.add_message(request, messages.WARNING, "Account deleted successfully")
     return redirect("account:delete_confirmation")
 
 
@@ -82,7 +88,9 @@ def account_activate(request, uidb64, token):
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
-        login(request, user)
-        return redirect("account:dashboard")
+        messages.add_message(
+            request, messages.SUCCESS, "Account activated successfully, please login."
+        )
+        return redirect("account:login")
     else:
         return render(request, "account/registration/activation_invalid.html")

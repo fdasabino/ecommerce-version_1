@@ -36,13 +36,13 @@
                   <button class="btn btn-primary py-2 mb-4 mt-5 fw-bold" type="submit" value="Log-in">Sign in
                   </button>
                 </div>
-                <p class="text-center pb-3">
+                <p class="text-center">
                   <a href="{% url "account:register" %}">Create an account</a>
                 </p>
+                <p class="small text-center">
+                  <a href="{% url "account:pwdreset" %}">Forgotten Password?</a>
+                </p>
               </form>
-              <p class="small text-center pt-4">
-                <a href="{% url "account:pwdreset" %}">Forgotten Password?</a>
-              </p>
             </div>
           </div>
         </div>
