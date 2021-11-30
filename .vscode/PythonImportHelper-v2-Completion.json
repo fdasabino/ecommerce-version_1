@@ -345,14 +345,6 @@
         "documentation": {}
     },
     {
-        "label": "login",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth",
-        "documentation": {}
-    },
-    {
         "label": "logout",
         "importPath": "django.contrib.auth",
         "description": "django.contrib.auth",
