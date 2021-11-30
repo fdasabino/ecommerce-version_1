@@ -40,6 +40,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -90,14 +106,6 @@
     },
     {
         "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -752,19 +760,28 @@
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "account.migrations.0002_remove_userbase_user_name",
-        "description": "account.migrations.0002_remove_userbase_user_name",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0001_initial'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='userbase',\n            name='user_name',\n        ),\n    ]",
-        "detail": "account.migrations.0002_remove_userbase_user_name",
+        "importPath": "account.migrations.0002_rename_first_name_userbase_full_name",
+        "description": "account.migrations.0002_rename_first_name_userbase_full_name",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0001_initial'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='userbase',\n            old_name='first_name',\n            new_name='full_name',\n        ),",
+        "detail": "account.migrations.0002_rename_first_name_userbase_full_name",
         "documentation": {}
     },
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "account.migrations.0003_rename_email_userbase_user_name",
-        "description": "account.migrations.0003_rename_email_userbase_user_name",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0002_remove_userbase_user_name'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='userbase',\n            old_name='email',\n            new_name='user_name',\n        ),",
-        "detail": "account.migrations.0003_rename_email_userbase_user_name",
+        "importPath": "account.migrations.0003_auto_20211130_1843",
+        "description": "account.migrations.0003_auto_20211130_1843",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0002_rename_first_name_userbase_full_name'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='userbase',\n            name='about',\n        ),\n        migrations.AlterField(",
+        "detail": "account.migrations.0003_auto_20211130_1843",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "account.migrations.0004_remove_userbase_full_name",
+        "description": "account.migrations.0004_remove_userbase_full_name",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('account', '0003_auto_20211130_1843'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='userbase',\n            name='full_name',\n        ),\n    ]",
+        "detail": "account.migrations.0004_remove_userbase_full_name",
         "documentation": {}
     },
     {
@@ -781,7 +798,7 @@
         "kind": 6,
         "importPath": "account.forms",
         "description": "account.forms",
-        "peekOfCode": "class UserLoginForm(AuthenticationForm):\n    username = forms.CharField(\n        widget=forms.TextInput(\n            attrs={\n                \"class\": \"form-control mb-3\",\n                \"placeholder\": \"Email\",\n                \"id\": \"login-email\",\n            }\n        )\n    )",
+        "peekOfCode": "class UserLoginForm(AuthenticationForm):\n    username = forms.CharField(\n        widget=forms.TextInput(\n            attrs={\n                \"class\": \"form-control mb-3\",\n                \"placeholder\": \"Username\",\n                \"id\": \"login-username\",\n            }\n        )\n    )",
         "detail": "account.forms",
         "documentation": {}
     },
@@ -790,7 +807,7 @@
         "kind": 6,
         "importPath": "account.forms",
         "description": "account.forms",
-        "peekOfCode": "class RegistrationForm(forms.ModelForm):\n    user_name = forms.EmailField(\n        max_length=100,\n        help_text=\"Required\",\n        error_messages={\"required\": \"Sorry, you will need an email\"},\n    )\n    full_name = forms.CharField(\n        label=\"Full Name\", min_length=4, max_length=50, help_text=\"Required\"\n    )\n    password = forms.CharField(label=\"Password\", widget=forms.PasswordInput)",
+        "peekOfCode": "class RegistrationForm(forms.ModelForm):\n    user_name = forms.CharField(\n        label=\"Full Name\",\n        min_length=4,\n        max_length=50,\n        widget=forms.TextInput(\n            attrs={\n                \"class\": \"form-control mb-3\",\n                \"placeholder\": \"Full Name\",\n                \"id\": \"form-lastname\",",
         "detail": "account.forms",
         "documentation": {}
     },
@@ -817,7 +834,7 @@
         "kind": 6,
         "importPath": "account.forms",
         "description": "account.forms",
-        "peekOfCode": "class UserEditForm(forms.ModelForm):\n    user_name = forms.EmailField(\n        label=\"Account email (can not be changed)\",\n        max_length=200,\n        widget=forms.TextInput(\n            attrs={\n                \"class\": \"form-control mb-3\",\n                \"placeholder\": \"email\",\n                \"id\": \"form-email\",\n                \"readonly\": \"readonly\",",
+        "peekOfCode": "class UserEditForm(forms.ModelForm):\n    email = forms.EmailField(\n        label=\"Account email (can not be changed)\",\n        max_length=200,\n        widget=forms.TextInput(\n            attrs={\n                \"class\": \"form-control mb-3\",\n                \"placeholder\": \"email\",\n                \"id\": \"form-email\",\n                \"readonly\": \"readonly\",",
         "detail": "account.forms",
         "documentation": {}
     },
@@ -826,7 +843,7 @@
         "kind": 6,
         "importPath": "account.models",
         "description": "account.models",
-        "peekOfCode": "class CustomAccountManager(BaseUserManager):\n    def create_superuser(self, email, full_name, password, **other_fields):\n        other_fields.setdefault(\"is_staff\", True)\n        other_fields.setdefault(\"is_superuser\", True)\n        other_fields.setdefault(\"is_active\", True)\n        if other_fields.get(\"is_staff\") is not True:\n            raise ValueError(\"Superuser must be assigned to is_staff=True.\")\n        if other_fields.get(\"is_superuser\") is not True:\n            raise ValueError(\"Superuser must be assigned to is_superuser=True.\")\n        return self.create_user(email, full_name, password, **other_fields)",
+        "peekOfCode": "class CustomAccountManager(BaseUserManager):\n    def create_superuser(self, email, user_name, password, **other_fields):\n        other_fields.setdefault(\"is_staff\", True)\n        other_fields.setdefault(\"is_superuser\", True)\n        other_fields.setdefault(\"is_active\", True)\n        if other_fields.get(\"is_staff\") is not True:\n            raise ValueError(\"Superuser must be assigned to is_staff=True.\")\n        if other_fields.get(\"is_superuser\") is not True:\n            raise ValueError(\"Superuser must be assigned to is_superuser=True.\")\n        return self.create_user(email, user_name, password, **other_fields)",
         "detail": "account.models",
         "documentation": {}
     },
@@ -835,7 +852,7 @@
         "kind": 6,
         "importPath": "account.models",
         "description": "account.models",
-        "peekOfCode": "class UserBase(AbstractBaseUser, PermissionsMixin):\n    user_name = models.EmailField(_(\"email address\"), unique=True)\n    full_name = models.CharField(max_length=150, blank=True)\n    # Delivery details\n    country = CountryField()\n    phone_number = models.CharField(max_length=15, blank=True)\n    postcode = models.CharField(max_length=12, blank=True)\n    address_line_1 = models.CharField(max_length=150, blank=True)\n    address_line_2 = models.CharField(max_length=150, blank=True)\n    town_city = models.CharField(max_length=150, blank=True)",
+        "peekOfCode": "class UserBase(AbstractBaseUser, PermissionsMixin):\n    email = models.EmailField(_(\"email address\"), unique=True)\n    user_name = models.CharField(max_length=150, unique=True)\n    # Delivery details\n    country = CountryField()\n    phone_number = models.CharField(max_length=15, blank=True)\n    postcode = models.CharField(max_length=12, blank=True)\n    address_line_1 = models.CharField(max_length=150, blank=True)\n    address_line_2 = models.CharField(max_length=150, blank=True)\n    town_city = models.CharField(max_length=150, blank=True)",
         "detail": "account.models",
         "documentation": {}
     },
@@ -876,29 +893,11 @@
         "documentation": {}
     },
     {
-        "label": "account_register",
-        "kind": 2,
-        "importPath": "account.views",
-        "description": "account.views",
-        "peekOfCode": "def account_register(request):\n    if request.user.is_authenticated:\n        return redirect(\"account:dashboard\")\n    if request.method == \"POST\":\n        registerForm = RegistrationForm(request.POST)\n        if registerForm.is_valid():\n            return account_register_form(registerForm, request)\n    else:\n        registerForm = RegistrationForm()\n    return render(request, \"account/registration/register.html\", {\"form\": registerForm})",
-        "detail": "account.views",
-        "documentation": {}
-    },
-    {
-        "label": "account_register_form",
-        "kind": 2,
-        "importPath": "account.views",
-        "description": "account.views",
-        "peekOfCode": "def account_register_form(registerForm, request):\n    user = registerForm.save(commit=False)\n    user.fullname = registerForm.cleaned_data[\"full_name\"]\n    user.email = registerForm.cleaned_data[\"user_name\"]\n    user.set_password(registerForm.cleaned_data[\"password\"])\n    user.is_active = False\n    user.save()\n    current_site = get_current_site(request)\n    subject = \"Activate your Account\"\n    message = render_to_string(",
-        "detail": "account.views",
-        "documentation": {}
-    },
-    {
         "label": "dashboard",
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def dashboard(request):\n    messages.add_message(request, messages.INFO, \"Welcome to your dashboard\")\n    return render(request, \"account/user/dashboard.html\")\n@login_required\ndef edit_details(\n    request,\n):\n    if request.method == \"POST\":\n        user_form = UserEditForm(instance=request.user, data=request.POST)\n        if user_form.is_valid():",
+        "peekOfCode": "def dashboard(request):\n    # orders = user_orders(request)\n    return render(request, \"account/user/dashboard.html\", {\"section\": \"profile\"})\n@login_required\ndef edit_details(request):\n    if request.method == \"POST\":\n        user_form = UserEditForm(instance=request.user, data=request.POST)\n        if user_form.is_valid():\n            user_form.save()\n    else:",
         "detail": "account.views",
         "documentation": {}
     },
@@ -907,7 +906,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def edit_details(\n    request,\n):\n    if request.method == \"POST\":\n        user_form = UserEditForm(instance=request.user, data=request.POST)\n        if user_form.is_valid():\n            messages.add_message(\n                request, messages.SUCCESS, \"Details updated successfully\"\n            )\n            user_form.save()",
+        "peekOfCode": "def edit_details(request):\n    if request.method == \"POST\":\n        user_form = UserEditForm(instance=request.user, data=request.POST)\n        if user_form.is_valid():\n            user_form.save()\n    else:\n        user_form = UserEditForm(instance=request.user)\n    return render(request, \"account/user/edit_details.html\", {\"user_form\": user_form})\n@login_required\ndef delete_user(request):",
         "detail": "account.views",
         "documentation": {}
     },
@@ -916,7 +915,16 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def delete_user(request):\n    user = UserBase.objects.get(full_name=request.user)\n    user.is_active = False\n    user.save()\n    logout(request)\n    messages.add_message(request, messages.WARNING, \"Account Deleted Successfully\")\n    return redirect(\"account:delete_confirmation\")\ndef account_activate(request, uidb64, token):\n    try:\n        uid = force_text(urlsafe_base64_decode(uidb64))",
+        "peekOfCode": "def delete_user(request):\n    user = UserBase.objects.get(user_name=request.user)\n    user.is_active = False\n    user.save()\n    logout(request)\n    return redirect(\"account:delete_confirmation\")\ndef account_register(request):\n    if request.user.is_authenticated:\n        return redirect(\"account:dashboard\")\n    if request.method == \"POST\":",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "account_register",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def account_register(request):\n    if request.user.is_authenticated:\n        return redirect(\"account:dashboard\")\n    if request.method == \"POST\":\n        registerForm = RegistrationForm(request.POST)\n        if registerForm.is_valid():\n            user = registerForm.save(commit=False)\n            user.email = registerForm.cleaned_data[\"email\"]\n            user.set_password(registerForm.cleaned_data[\"password\"])\n            user.is_active = False",
         "detail": "account.views",
         "documentation": {}
     },
@@ -925,7 +933,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def account_activate(request, uidb64, token):\n    try:\n        uid = force_text(urlsafe_base64_decode(uidb64))\n        user = UserBase.objects.get(pk=uid)\n    except (TypeError, ValueError, OverflowError, user.DoesNotExist):\n        user = None\n    if user is None or not account_activation_token.check_token(user, token):\n        return render(request, \"account/registration/activation_invalid.html\")\n    user.is_active = True\n    user.save()",
+        "peekOfCode": "def account_activate(request, uidb64, token):\n    try:\n        uid = force_text(urlsafe_base64_decode(uidb64))\n        user = UserBase.objects.get(pk=uid)\n    except (TypeError, ValueError, OverflowError, user.DoesNotExist):\n        user = None\n    if user is not None and account_activation_token.check_token(user, token):\n        user.is_active = True\n        user.save()\n        login(request, user)",
         "detail": "account.views",
         "documentation": {}
     },

@@ -14,8 +14,8 @@ class UserLoginForm(AuthenticationForm):
         widget=forms.TextInput(
             attrs={
                 "class": "form-control mb-3",
-                "placeholder": "Email",
-                "id": "login-email",
+                "placeholder": "Username",
+                "id": "login-username",
             }
         )
     )
@@ -32,13 +32,22 @@ class UserLoginForm(AuthenticationForm):
 
 class RegistrationForm(forms.ModelForm):
 
-    user_name = forms.EmailField(
+    user_name = forms.CharField(
+        label="Full Name",
+        min_length=4,
+        max_length=50,
+        widget=forms.TextInput(
+            attrs={
+                "class": "form-control mb-3",
+                "placeholder": "Full Name",
+                "id": "form-lastname",
+            }
+        ),
+    )
+    email = forms.EmailField(
         max_length=100,
         help_text="Required",
         error_messages={"required": "Sorry, you will need an email"},
-    )
-    full_name = forms.CharField(
-        label="Full Name", min_length=4, max_length=50, help_text="Required"
     )
     password = forms.CharField(label="Password", widget=forms.PasswordInput)
     password2 = forms.CharField(label="Repeat password", widget=forms.PasswordInput)
@@ -46,20 +55,16 @@ class RegistrationForm(forms.ModelForm):
     class Meta:
         model = UserBase
         fields = (
-            "full_name",
             "user_name",
+            "email",
         )
 
-    def clean_email(self):
+    def clean_user_name(self):
         user_name = self.cleaned_data["user_name"]
-        if UserBase.objects.filter(email=user_name).exists():
-            raise forms.ValidationError(
-                "The email provided is already associated with another user. Please use a different email."
-            )
+        r = UserBase.objects.filter(user_name=user_name)
+        if r.count():
+            raise forms.ValidationError("Username already exists")
         return user_name
-
-    def clean_full_name(self):
-        return self.cleaned_data["full_name"]
 
     def clean_password2(self):
         cd = self.cleaned_data
@@ -67,12 +72,20 @@ class RegistrationForm(forms.ModelForm):
             raise forms.ValidationError("Passwords do not match.")
         return cd["password2"]
 
+    def clean_email(self):
+        email = self.cleaned_data["email"]
+        if UserBase.objects.filter(email=email).exists():
+            raise forms.ValidationError(
+                "Please use another Email, that is already taken"
+            )
+        return email
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields["full_name"].widget.attrs.update(
+        self.fields["user_name"].widget.attrs.update(
             {"class": "form-control mb-3", "placeholder": "Full Name"}
         )
-        self.fields["user_name"].widget.attrs.update(
+        self.fields["email"].widget.attrs.update(
             {
                 "class": "form-control mb-3",
                 "placeholder": "E-mail",
@@ -136,7 +149,7 @@ class PwdResetConfirmForm(SetPasswordForm):
 
 class UserEditForm(forms.ModelForm):
 
-    user_name = forms.EmailField(
+    email = forms.EmailField(
         label="Account email (can not be changed)",
         max_length=200,
         widget=forms.TextInput(
@@ -149,15 +162,15 @@ class UserEditForm(forms.ModelForm):
         ),
     )
 
-    full_name = forms.CharField(
-        label="Full Name",
+    user_name = forms.CharField(
+        label="Firstname",
         min_length=4,
         max_length=50,
         widget=forms.TextInput(
             attrs={
                 "class": "form-control mb-3",
-                "placeholder": "Full Name",
-                "id": "form-fullname",
+                "placeholder": "Username",
+                "id": "form-firstname",
             }
         ),
     )
@@ -165,11 +178,6 @@ class UserEditForm(forms.ModelForm):
     class Meta:
         model = UserBase
         fields = (
+            "email",
             "user_name",
-            "full_name",
         )
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields["full_name"].required = True
-        self.fields["user_name"].required = True
