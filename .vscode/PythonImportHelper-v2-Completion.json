@@ -80,6 +80,14 @@
         "documentation": {}
     },
     {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -158,6 +166,22 @@
         "description": "django.contrib",
         "isExtraImport": true,
         "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -305,6 +329,14 @@
         "documentation": {}
     },
     {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
         "label": "Client",
         "importPath": "django.test",
         "description": "django.test",
@@ -393,6 +425,14 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "reverse",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -430,6 +470,14 @@
         "description": "django.views.generic",
         "isExtraImport": true,
         "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
         "documentation": {}
     },
     {
@@ -490,6 +538,14 @@
     },
     {
         "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -703,6 +759,64 @@
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "stripe",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "stripe",
+        "description": "stripe",
+        "detail": "stripe",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http.response",
+        "description": "django.http.response",
+        "isExtraImport": true,
+        "detail": "django.http.response",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateView",
+        "importPath": "django.views.generic.base",
+        "description": "django.views.generic.base",
+        "isExtraImport": true,
+        "detail": "django.views.generic.base",
+        "documentation": {}
+    },
+    {
+        "label": "Basket",
+        "importPath": "basket.basket",
+        "description": "basket.basket",
+        "isExtraImport": true,
+        "detail": "basket.basket",
+        "documentation": {}
+    },
+    {
+        "label": "payment_confirmation",
+        "importPath": "orders.views",
+        "description": "orders.views",
+        "isExtraImport": true,
+        "detail": "orders.views",
         "documentation": {}
     },
     {
@@ -1291,7 +1405,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"store.urls\", namespace=\"store\")),\n    path(\"basket/\", include(\"basket.urls\", namespace=\"basket\")),\n    path(\"account/\", include(\"account.urls\", namespace=\"account\")),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"store.urls\", namespace=\"store\")),\n    path(\"basket/\", include(\"basket.urls\", namespace=\"basket\")),\n    path(\"account/\", include(\"account.urls\", namespace=\"account\")),\n    path(\"payment/\", include(\"payment.urls\", namespace=\"payment\")),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -1302,6 +1416,69 @@
         "description": "core.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentConfig",
+        "kind": 6,
+        "importPath": "payment.apps",
+        "description": "payment.apps",
+        "peekOfCode": "class PaymentConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'payment'",
+        "detail": "payment.apps",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "payment.urls",
+        "description": "payment.urls",
+        "peekOfCode": "app_name = \"payment\"\nurlpatterns = [\n    path(\"\", views.BasketView, name=\"basket\"),\n    path(\"orderplaced/\", views.order_placed, name=\"order_placed\"),\n    path(\"error/\", views.Error.as_view(), name=\"error\"),\n    path(\"webhook/\", views.stripe_webhook),\n]",
+        "detail": "payment.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "payment.urls",
+        "description": "payment.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", views.BasketView, name=\"basket\"),\n    path(\"orderplaced/\", views.order_placed, name=\"order_placed\"),\n    path(\"error/\", views.Error.as_view(), name=\"error\"),\n    path(\"webhook/\", views.stripe_webhook),\n]",
+        "detail": "payment.urls",
+        "documentation": {}
+    },
+    {
+        "label": "Error",
+        "kind": 6,
+        "importPath": "payment.views",
+        "description": "payment.views",
+        "peekOfCode": "class Error(TemplateView):\n    template_name = \"payment/error.html\"\n@login_required\ndef BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = \"sk_test_51Jv33GGpplz6thkI6Ab7YDCpd0QEgSfNFe1lS06mZ8efPoAq1FxTGZV6Nyw8Hd7nJXMYRNj8xYRWy9fz8VHd4ECZ00hCuEZNnR\"\n    intent = stripe.PaymentIntent.create(",
+        "detail": "payment.views",
+        "documentation": {}
+    },
+    {
+        "label": "order_placed",
+        "kind": 2,
+        "importPath": "payment.views",
+        "description": "payment.views",
+        "peekOfCode": "def order_placed(request):\n    basket = Basket(request)\n    basket.clear()\n    return render(request, \"payment/orderplaced.html\")\nclass Error(TemplateView):\n    template_name = \"payment/error.html\"\n@login_required\ndef BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())",
+        "detail": "payment.views",
+        "documentation": {}
+    },
+    {
+        "label": "BasketView",
+        "kind": 2,
+        "importPath": "payment.views",
+        "description": "payment.views",
+        "peekOfCode": "def BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = \"sk_test_51Jv33GGpplz6thkI6Ab7YDCpd0QEgSfNFe1lS06mZ8efPoAq1FxTGZV6Nyw8Hd7nJXMYRNj8xYRWy9fz8VHd4ECZ00hCuEZNnR\"\n    intent = stripe.PaymentIntent.create(\n        amount=total, currency=\"gbp\", metadata={\"userid\": request.user.id}\n    )\n    return render(request, \"payment/home.html\", {\"client_secret\": intent.client_secret})",
+        "detail": "payment.views",
+        "documentation": {}
+    },
+    {
+        "label": "stripe_webhook",
+        "kind": 2,
+        "importPath": "payment.views",
+        "description": "payment.views",
+        "peekOfCode": "def stripe_webhook(request):\n    payload = request.body\n    event = None\n    try:\n        event = stripe.Event.construct_from(json.loads(payload), stripe.api_key)\n    except ValueError as e:\n        print(e)\n        return HttpResponse(status=400)\n    # Handle the event\n    if event.type == \"payment_intent.succeeded\":",
+        "detail": "payment.views",
         "documentation": {}
     },
     {
