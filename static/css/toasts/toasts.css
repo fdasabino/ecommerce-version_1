@@ -1,0 +1,24 @@
+/* ------------------------------- bootstrap toasts */
+
+.message-container {
+  position: fixed;
+  top: 72px;
+  right: 10px;
+  z-index: 99999999999;
+}
+
+.toast {
+  position: fixed;
+  top: calc(5rem - 4px);
+  right: 0;
+}
+
+.toast-capper {
+  height: 5px;
+}
+
+.cart-notification-wrapper {
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

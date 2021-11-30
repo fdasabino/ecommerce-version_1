@@ -21,6 +21,10 @@
   position: relative;
 }
 
+.btn {
+  border-radius: 0;
+}
+
 .basket-btn:hover,
 .basket-btn:focus,
 .basket-btn:active,

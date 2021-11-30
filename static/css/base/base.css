@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 /* Bootstrap Over-ride */
 @media (min-width: 1000px) {
   .container {
@@ -24,6 +28,10 @@
 
 .alert-primary {
   background-color: #E4F1FF;
+}
+
+.btn {
+  border-radius: 0;
 }
 
 

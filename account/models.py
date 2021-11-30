@@ -37,7 +37,7 @@ class CustomAccountManager(BaseUserManager):
 
 class UserBase(AbstractBaseUser, PermissionsMixin):
 
-    email = models.EmailField(_("email address"), unique=True)
+    user_name = models.EmailField(_("email address"), unique=True)
     full_name = models.CharField(max_length=150, blank=True)
     # Delivery details
     country = CountryField()
@@ -54,7 +54,7 @@ class UserBase(AbstractBaseUser, PermissionsMixin):
 
     objects = CustomAccountManager()
 
-    USERNAME_FIELD = "email"
+    USERNAME_FIELD = "user_name"
     REQUIRED_FIELDS = ["full_name"]
 
     class Meta:
