@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-4+r4fuy$0lgmo^=^9fp%7@7ca51o!s$!&95hz1tq(x@48u1we7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["yourdomain.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["yourdomain.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "basket",
     "account",
     "payment",
+    "orders",
 ]
 
 MIDDLEWARE = [
@@ -121,6 +122,8 @@ USE_L10N = True
 USE_TZ = True
 
 
+BASKET_SESSION_ID = "basket"
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -143,3 +146,9 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# Stripe Payment
+# PUBLISHABLE_KEY = ''
+# SECRET_KEY = ''
+STRIPE_ENDPOINT_SECRET = "whsec_Kk8Phs6J66uadUZjvCADPuPGS0wGxtJ7"
+# stripe listen --forward-to localhost:8000/payment/webhook/

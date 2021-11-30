@@ -61,7 +61,7 @@ form.addEventListener('submit', (ev) => {
             address: {
               line1: custAdd,
               line2: custAdd2,
-              zip: postCode
+              postal_code: postCode,
             },
             name: custName
           },
@@ -83,7 +83,4 @@ form.addEventListener('submit', (ev) => {
     },
     error(xhr, errmsg, err) {},
   });
-
-
-
 });
