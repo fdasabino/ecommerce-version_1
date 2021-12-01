@@ -1,7 +1,6 @@
 from decimal import Decimal
 
 from django.conf import settings
-
 from store.models import Product
 
 
@@ -64,15 +63,11 @@ class Basket:
         self.save()
 
     def get_subtotal_price(self):
-        return sum(
-            Decimal(item["price"]) * item["qty"] for item in self.basket.values()
-        )
+        return sum(Decimal(item["price"]) * item["qty"] for item in self.basket.values())
 
     def get_total_price(self):
 
-        subtotal = sum(
-            Decimal(item["price"]) * item["qty"] for item in self.basket.values()
-        )
+        subtotal = sum(Decimal(item["price"]) * item["qty"] for item in self.basket.values())
 
         if subtotal == 0:
             shipping = Decimal(0.00)

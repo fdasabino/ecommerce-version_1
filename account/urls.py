@@ -13,9 +13,7 @@ app_name = "account"
 urlpatterns = [
     path(
         "login/",
-        auth_views.LoginView.as_view(
-            template_name="account/user/login.html", form_class=UserLoginForm
-        ),
+        auth_views.LoginView.as_view(template_name="account/user/login.html", form_class=UserLoginForm),
         name="login",
     ),
     path(
@@ -24,9 +22,7 @@ urlpatterns = [
         name="logout",
     ),
     path("register/", views.account_register, name="register"),
-    path(
-        "activate/<slug:uidb64>/<slug:token>)/", views.account_activate, name="activate"
-    ),
+    path("activate/<slug:uidb64>/<slug:token>)/", views.account_activate, name="activate"),
     # Reset password
     path(
         "password_reset/",

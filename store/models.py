@@ -5,11 +5,7 @@ from django.urls import reverse
 
 class ProductManager(models.Manager):
     def get_queryset(self):
-        return (
-            super(ProductManager, self)
-            .get_queryset()
-            .filter(is_active=True, in_stock=True)
-        )
+        return super(ProductManager, self).get_queryset().filter(is_active=True, in_stock=True)
 
 
 class Category(models.Model):
@@ -27,9 +23,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ForeignKey(
-        Category, related_name="product", on_delete=models.CASCADE
-    )
+    category = models.ForeignKey(Category, related_name="product", on_delete=models.CASCADE)
     created_by = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,

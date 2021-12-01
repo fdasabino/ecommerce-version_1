@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.sites.shortcuts import get_current_site
@@ -6,8 +7,6 @@ from django.shortcuts import redirect, render
 from django.template.loader import render_to_string
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
-from django.contrib import messages
-
 from orders.views import user_orders
 
 from .forms import RegistrationForm, UserEditForm
@@ -18,9 +17,7 @@ from .tokens import account_activation_token
 @login_required
 def dashboard(request):
     orders = user_orders(request)
-    return render(
-        request, "account/user/dashboard.html", {"section": "profile", "orders": orders}
-    )
+    return render(request, "account/user/dashboard.html", {"section": "profile", "orders": orders})
 
 
 @login_required
@@ -29,9 +26,7 @@ def edit_details(request):
         user_form = UserEditForm(instance=request.user, data=request.POST)
 
         if user_form.is_valid():
-            messages.add_message(
-                request, messages.SUCCESS, "Details updated successfully"
-            )
+            messages.add_message(request, messages.SUCCESS, "Details updated successfully")
             user_form.save()
     else:
         user_form = UserEditForm(instance=request.user)
@@ -89,9 +84,7 @@ def account_activate(request, uidb64, token):
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
-        messages.add_message(
-            request, messages.SUCCESS, "Account activated successfully, please login."
-        )
+        messages.add_message(request, messages.SUCCESS, "Account activated successfully, please login.")
         return redirect("account:login")
     else:
         return render(request, "account/registration/activation_invalid.html")

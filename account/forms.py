@@ -70,16 +70,12 @@ class RegistrationForm(forms.ModelForm):
     def clean_email(self):
         email = self.cleaned_data["email"]
         if UserBase.objects.filter(email=email).exists():
-            raise forms.ValidationError(
-                "Please use another Email, that is already taken"
-            )
+            raise forms.ValidationError("Please use another Email, that is already taken")
         return email
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields["user_name"].widget.attrs.update(
-            {"class": "form-control mb-3", "placeholder": "Full Name"}
-        )
+        self.fields["user_name"].widget.attrs.update({"class": "form-control mb-3", "placeholder": "Full Name"})
         self.fields["email"].widget.attrs.update(
             {
                 "class": "form-control mb-3",
@@ -88,12 +84,8 @@ class RegistrationForm(forms.ModelForm):
                 "id": "id_email",
             }
         )
-        self.fields["password"].widget.attrs.update(
-            {"class": "form-control mb-3", "placeholder": "Password"}
-        )
-        self.fields["password2"].widget.attrs.update(
-            {"class": "form-control", "placeholder": "Repeat Password"}
-        )
+        self.fields["password"].widget.attrs.update({"class": "form-control mb-3", "placeholder": "Password"})
+        self.fields["password2"].widget.attrs.update({"class": "form-control", "placeholder": "Repeat Password"})
 
 
 class PwdResetForm(PasswordResetForm):
@@ -113,9 +105,7 @@ class PwdResetForm(PasswordResetForm):
         email = self.cleaned_data["email"]
         u = UserBase.objects.filter(email=email)
         if not u:
-            raise forms.ValidationError(
-                "Unfortunately we can not find that email address"
-            )
+            raise forms.ValidationError("Unfortunately we can not find that email address")
         return email
 
 

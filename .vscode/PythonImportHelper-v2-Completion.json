@@ -891,6 +891,22 @@
         "documentation": {}
     },
     {
+        "label": "Basket",
+        "importPath": "basket.basket",
+        "description": "basket.basket",
+        "isExtraImport": true,
+        "detail": "basket.basket",
+        "documentation": {}
+    },
+    {
+        "label": "Basket",
+        "importPath": "basket.basket",
+        "description": "basket.basket",
+        "isExtraImport": true,
+        "detail": "basket.basket",
+        "documentation": {}
+    },
+    {
         "label": "JsonResponse",
         "importPath": "django.http.response",
         "description": "django.http.response",
@@ -904,22 +920,6 @@
         "description": "django.http.response",
         "isExtraImport": true,
         "detail": "django.http.response",
-        "documentation": {}
-    },
-    {
-        "label": "Basket",
-        "importPath": "basket.basket",
-        "description": "basket.basket",
-        "isExtraImport": true,
-        "detail": "basket.basket",
-        "documentation": {}
-    },
-    {
-        "label": "Basket",
-        "importPath": "basket.basket",
-        "description": "basket.basket",
-        "isExtraImport": true,
-        "detail": "basket.basket",
         "documentation": {}
     },
     {
@@ -1146,7 +1146,7 @@
         "kind": 5,
         "importPath": "account.urls",
         "description": "account.urls",
-        "peekOfCode": "app_name = \"account\"\nurlpatterns = [\n    path(\n        \"login/\",\n        auth_views.LoginView.as_view(\n            template_name=\"account/user/login.html\", form_class=UserLoginForm\n        ),\n        name=\"login\",\n    ),\n    path(",
+        "peekOfCode": "app_name = \"account\"\nurlpatterns = [\n    path(\n        \"login/\",\n        auth_views.LoginView.as_view(template_name=\"account/user/login.html\", form_class=UserLoginForm),\n        name=\"login\",\n    ),\n    path(\n        \"logout/\",\n        auth_views.LogoutView.as_view(next_page=\"/\"),",
         "detail": "account.urls",
         "documentation": {}
     },
@@ -1155,7 +1155,7 @@
         "kind": 5,
         "importPath": "account.urls",
         "description": "account.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\n        \"login/\",\n        auth_views.LoginView.as_view(\n            template_name=\"account/user/login.html\", form_class=UserLoginForm\n        ),\n        name=\"login\",\n    ),\n    path(\n        \"logout/\",",
+        "peekOfCode": "urlpatterns = [\n    path(\n        \"login/\",\n        auth_views.LoginView.as_view(template_name=\"account/user/login.html\", form_class=UserLoginForm),\n        name=\"login\",\n    ),\n    path(\n        \"logout/\",\n        auth_views.LogoutView.as_view(next_page=\"/\"),\n        name=\"logout\",",
         "detail": "account.urls",
         "documentation": {}
     },
@@ -1164,7 +1164,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def dashboard(request):\n    orders = user_orders(request)\n    return render(\n        request, \"account/user/dashboard.html\", {\"section\": \"profile\", \"orders\": orders}\n    )\n@login_required\ndef edit_details(request):\n    if request.method == \"POST\":\n        user_form = UserEditForm(instance=request.user, data=request.POST)\n        if user_form.is_valid():",
+        "peekOfCode": "def dashboard(request):\n    orders = user_orders(request)\n    return render(request, \"account/user/dashboard.html\", {\"section\": \"profile\", \"orders\": orders})\n@login_required\ndef edit_details(request):\n    if request.method == \"POST\":\n        user_form = UserEditForm(instance=request.user, data=request.POST)\n        if user_form.is_valid():\n            messages.add_message(request, messages.SUCCESS, \"Details updated successfully\")\n            user_form.save()",
         "detail": "account.views",
         "documentation": {}
     },
@@ -1173,7 +1173,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def edit_details(request):\n    if request.method == \"POST\":\n        user_form = UserEditForm(instance=request.user, data=request.POST)\n        if user_form.is_valid():\n            messages.add_message(\n                request, messages.SUCCESS, \"Details updated successfully\"\n            )\n            user_form.save()\n    else:\n        user_form = UserEditForm(instance=request.user)",
+        "peekOfCode": "def edit_details(request):\n    if request.method == \"POST\":\n        user_form = UserEditForm(instance=request.user, data=request.POST)\n        if user_form.is_valid():\n            messages.add_message(request, messages.SUCCESS, \"Details updated successfully\")\n            user_form.save()\n    else:\n        user_form = UserEditForm(instance=request.user)\n    return render(request, \"account/user/edit_details.html\", {\"user_form\": user_form})\n@login_required",
         "detail": "account.views",
         "documentation": {}
     },
@@ -1200,7 +1200,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def account_activate(request, uidb64, token):\n    try:\n        uid = force_text(urlsafe_base64_decode(uidb64))\n        user = UserBase.objects.get(pk=uid)\n    except (TypeError, ValueError, OverflowError, user.DoesNotExist):\n        user = None\n    if user is not None and account_activation_token.check_token(user, token):\n        user.is_active = True\n        user.save()\n        messages.add_message(",
+        "peekOfCode": "def account_activate(request, uidb64, token):\n    try:\n        uid = force_text(urlsafe_base64_decode(uidb64))\n        user = UserBase.objects.get(pk=uid)\n    except (TypeError, ValueError, OverflowError, user.DoesNotExist):\n        user = None\n    if user is not None and account_activation_token.check_token(user, token):\n        user.is_active = True\n        user.save()\n        messages.add_message(request, messages.SUCCESS, \"Account activated successfully, please login.\")",
         "detail": "account.views",
         "documentation": {}
     },
@@ -1218,7 +1218,7 @@
         "kind": 6,
         "importPath": "basket.apps",
         "description": "basket.apps",
-        "peekOfCode": "class BasketConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'basket'",
+        "peekOfCode": "class BasketConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"basket\"",
         "detail": "basket.apps",
         "documentation": {}
     },
@@ -1668,7 +1668,7 @@
         "kind": 6,
         "importPath": "payment.apps",
         "description": "payment.apps",
-        "peekOfCode": "class PaymentConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'payment'",
+        "peekOfCode": "class PaymentConfig(AppConfig):\n    default_auto_field = \"django.db.models.BigAutoField\"\n    name = \"payment\"",
         "detail": "payment.apps",
         "documentation": {}
     },
@@ -1695,7 +1695,7 @@
         "kind": 6,
         "importPath": "payment.views",
         "description": "payment.views",
-        "peekOfCode": "class Error(TemplateView):\n    template_name = \"payment/error.html\"\n@login_required\ndef BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = os.environ.get(\"STRIPE_SECRET_KEY\")\n    intent = stripe.PaymentIntent.create(",
+        "peekOfCode": "class Error(TemplateView):\n    template_name = \"payment/error.html\"\n@login_required\ndef BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = os.environ.get(\"STRIPE_SECRET_KEY\")\n    intent = stripe.PaymentIntent.create(amount=total, currency=\"gbp\", metadata={\"userid\": request.user.id})",
         "detail": "payment.views",
         "documentation": {}
     },
@@ -1713,7 +1713,7 @@
         "kind": 2,
         "importPath": "payment.views",
         "description": "payment.views",
-        "peekOfCode": "def BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = os.environ.get(\"STRIPE_SECRET_KEY\")\n    intent = stripe.PaymentIntent.create(\n        amount=total, currency=\"gbp\", metadata={\"userid\": request.user.id}\n    )\n    return render(",
+        "peekOfCode": "def BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = os.environ.get(\"STRIPE_SECRET_KEY\")\n    intent = stripe.PaymentIntent.create(amount=total, currency=\"gbp\", metadata={\"userid\": request.user.id})\n    return render(request, \"payment/payment.html\", {\"client_secret\": intent.client_secret})\n@csrf_exempt\ndef stripe_webhook(request):",
         "detail": "payment.views",
         "documentation": {}
     },
@@ -1812,7 +1812,7 @@
         "kind": 6,
         "importPath": "store.models",
         "description": "store.models",
-        "peekOfCode": "class ProductManager(models.Manager):\n    def get_queryset(self):\n        return (\n            super(ProductManager, self)\n            .get_queryset()\n            .filter(is_active=True, in_stock=True)\n        )\nclass Category(models.Model):\n    name = models.CharField(max_length=255, db_index=True)\n    slug = models.SlugField(max_length=255, unique=True)",
+        "peekOfCode": "class ProductManager(models.Manager):\n    def get_queryset(self):\n        return super(ProductManager, self).get_queryset().filter(is_active=True, in_stock=True)\nclass Category(models.Model):\n    name = models.CharField(max_length=255, db_index=True)\n    slug = models.SlugField(max_length=255, unique=True)\n    class Meta:\n        verbose_name_plural = \"categories\"\n    def get_absolute_url(self):\n        return reverse(\"store:category_list\", args=[self.slug])",
         "detail": "store.models",
         "documentation": {}
     },
@@ -1830,7 +1830,7 @@
         "kind": 6,
         "importPath": "store.models",
         "description": "store.models",
-        "peekOfCode": "class Product(models.Model):\n    category = models.ForeignKey(\n        Category, related_name=\"product\", on_delete=models.CASCADE\n    )\n    created_by = models.ForeignKey(\n        settings.AUTH_USER_MODEL,\n        on_delete=models.CASCADE,\n        related_name=\"product_creator\",\n    )\n    title = models.CharField(max_length=255)",
+        "peekOfCode": "class Product(models.Model):\n    category = models.ForeignKey(Category, related_name=\"product\", on_delete=models.CASCADE)\n    created_by = models.ForeignKey(\n        settings.AUTH_USER_MODEL,\n        on_delete=models.CASCADE,\n        related_name=\"product_creator\",\n    )\n    title = models.CharField(max_length=255)\n    author = models.CharField(max_length=255, default=\"admin\")\n    description = models.TextField(blank=True)",
         "detail": "store.models",
         "documentation": {}
     },
