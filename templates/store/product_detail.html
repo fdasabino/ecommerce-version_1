@@ -4,44 +4,55 @@
 {% block title %}{% if product %}{{ product.title }}{% else %}Product{% endif %}{% endblock %}
 
 {% block content %}
-<div class="container">
-  <section>
+<section>
+  <div class="container">
     <div class="row g-3">
-      <div class="col-md-5 col-lg-5 order-md-first bg-light">
-        <img class="img-fluid mx-auto d-block" width="200px" alt="Responsive image" src="{{ product.image.url }}">
-      </div>
-      <div class="col-md-7 col-lg-7 ps-md-3 ps-lg-5">
-        <h1 class="mb-0 h4">{{ product.title }}</h1>
-        <p><span class="lead">{{ product.author }}</span> (Author)</p>
-        <p>{{ product.description|slice:":355" }}...</p>
-        <div class="border">
-          <div class="col border-bottom">
-            <div class="row p-3">
-              <div class="col-6">Hardback</div>
-              <div class="col-6 text-end"><span class="h4 fw-bold">£{{ product.price }}</span></div>
+      <div class="col-md-5 ps-3 col-lg-5 order-md-last p-0 order-1">
+        <div class="d-grid gap-2">
+          <div class="d-flex d-flex-inline justify-content-between">
+            <div><span class="h3">£{{ product.regular_price }}</span>
+              <p class="text-muted">includes tax</p>
+            </div>
+            <div>
+              <label for="select">Qty</label>
+              <select id="select" class="h6 store-select-dropdown">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
             </div>
           </div>
-          <div class="col">
-            <div class="row p-3">
-              <div class="col-6">
-                <label for="select">Qty</label>
-                <select id="select">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                </select>
+          <hr>
+          <button type="button" id="add-button" value="{{product.id}}" class="btn btn-success fw500">Add to
+            basket</button>
+          <button type="button" id="add-button" value="{{product.id}}" class="btn btn-light fw500">Add to
+            Favorites</button>
+        </div>
+      </div>
+      <div class="col-md-7 col-lg-7 p-0">
+        <div class="card mb-3 border-0">
+          <div class="row g-0">
+            <div class="col-md-12">
+              <div class="card-body p-1">
+                <h1 class="mb-0 h2 pe-4 pb-4">{{ product.title }}</h1>
+                <div class="bg-light">
+  
+                {% for image in product.product_image.all %}
+                  {% if image.is_feature %}
+                    <img class="img-fluid mx-auto d-block" width="200px" alt="Responsive image" src="{{ image.image.url }}" alt="{{ image.image.alt_text }}">
+                  {% else %}
+                    <img class="img-fluid d-block-inline pt-3" width="100px" alt="Responsive image" src="{{ image.image.url }}" alt="{{ image.image.alt_text }}">
+                  {% endif %}
+                {% endfor %}    
+  
               </div>
-              <div class="col-6 text-end">
-                <button type="button" id="add-button" value="{{product.id}}" class="btn btn-secondary btn-sm">Add to
-                  basket</button></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-</div>
+  </div>
 <script>
   $(document).on('click', '#add-button', function (e) {
     e.preventDefault();
@@ -56,7 +67,6 @@
       },
       success: function (json) {
         document.getElementById("basket-qty").innerHTML = json.qty
-        location.reload()
       },
       error: function (xhr, errmsg, err) {}
     });

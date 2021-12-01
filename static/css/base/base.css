@@ -17,6 +17,16 @@ a {
   text-decoration: none;
 }
 
+.h3 {
+  text-transform: uppercase;
+}
+
+/* store */
+.store-select-dropdown {
+  width: 50px;
+  height: 40px;
+}
+
 /* Bootstrap Over-ride */
 @media (min-width: 1000px) {
   .container {
