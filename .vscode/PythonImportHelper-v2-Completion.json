@@ -1,5 +1,4 @@
-[
-    {
+[{
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
