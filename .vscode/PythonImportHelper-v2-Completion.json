@@ -1,4 +1,5 @@
-[{
+[
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -849,6 +850,14 @@
         "documentation": {}
     },
     {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
         "label": "get_asgi_application",
         "importPath": "django.core.asgi",
         "description": "django.core.asgi",
@@ -857,11 +866,12 @@
         "documentation": {}
     },
     {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
+        "label": "debug_toolbar",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "pathlib",
+        "importPath": "debug_toolbar",
+        "description": "debug_toolbar",
+        "detail": "debug_toolbar",
         "documentation": {}
     },
     {
@@ -1294,6 +1304,267 @@
         "documentation": {}
     },
     {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "ALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"store\",",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"store\",\n    \"basket\",\n    \"account\",",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]\nROOT_URLCONF = \"core.urls\"",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "ROOT_URLCONF = \"core.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [BASE_DIR / \"templates\"],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [BASE_DIR / \"templates\"],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "WSGI_APPLICATION = \"core.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "TIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "USE_L10N",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "USE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "BASKET_SESSION_ID",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "BASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "AUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "LOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_URL",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "LOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "STRIPE_PUBLISHABLE_KEY",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "STRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "STRIPE_SECRET_KEY",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "STRIPE_ENDPOINT_SECRET",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "STRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
         "label": "application",
         "kind": 5,
         "importPath": "core.asgi",
@@ -1303,272 +1574,11 @@
         "documentation": {}
     },
     {
-        "label": "BASE_DIR",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "SECRET_KEY",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DEBUG",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "ALLOWED_HOSTS",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"store\",",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "INSTALLED_APPS",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"store\",\n    \"basket\",\n    \"account\",",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MIDDLEWARE",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]\nROOT_URLCONF = \"core.urls\"",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "ROOT_URLCONF",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "ROOT_URLCONF = \"core.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [BASE_DIR / \"templates\"],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "TEMPLATES",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [BASE_DIR / \"templates\"],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "WSGI_APPLICATION",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "WSGI_APPLICATION = \"core.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/3.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DATABASES",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "AUTH_PASSWORD_VALIDATORS",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.UserAttributeSimilarityValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.MinimumLengthValidator\",\n    },\n    {\n        \"NAME\": \"django.contrib.auth.password_validation.CommonPasswordValidator\",\n    },",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LANGUAGE_CODE",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "TIME_ZONE",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "TIME_ZONE = \"Europe/Stockholm\"\nUSE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_I18N",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_L10N = True\nUSE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_L10N",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "USE_L10N = True\nUSE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "USE_TZ",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "USE_TZ = True\nBASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "BASKET_SESSION_ID",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "BASKET_SESSION_ID = \"basket\"\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/3.2/howto/static-files/\nSTATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATIC_URL",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATICFILES_DIRS",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_URL",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "MEDIA_ROOT",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "AUTH_USER_MODEL",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "AUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LOGIN_REDIRECT_URL",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "LOGIN_URL",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "LOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "EMAIL_BACKEND",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DEFAULT_AUTO_FIELD",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STRIPE_PUBLISHABLE_KEY",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "STRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STRIPE_SECRET_KEY",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STRIPE_ENDPOINT_SECRET",
-        "kind": 5,
-        "importPath": "core.settings",
-        "description": "core.settings",
-        "peekOfCode": "STRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
-        "detail": "core.settings",
-        "documentation": {}
-    },
-    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"store.urls\", namespace=\"store\")),\n    path(\"basket/\", include(\"basket.urls\", namespace=\"basket\")),\n    path(\"account/\", include(\"account.urls\", namespace=\"account\")),\n    path(\"payment/\", include(\"payment.urls\", namespace=\"payment\")),\n    path(\"orders/\", include(\"orders.urls\", namespace=\"orders\")),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"store.urls\", namespace=\"store\")),\n    path(\"basket/\", include(\"basket.urls\", namespace=\"basket\")),\n    path(\"account/\", include(\"account.urls\", namespace=\"account\")),\n    path(\"payment/\", include(\"payment.urls\", namespace=\"payment\")),\n    path(\"orders/\", include(\"orders.urls\", namespace=\"orders\")),\n    path(\"__debug__/\", include(debug_toolbar.urls)),\n]\nif settings.DEBUG:",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -1928,7 +1938,7 @@
         "kind": 2,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"core.settings\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault(\"DJANGO_SETTINGS_MODULE\", \"core.settings.dev_debug\")\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
         "detail": "manage",
         "documentation": {}
     }
