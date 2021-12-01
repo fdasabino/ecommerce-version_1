@@ -5,7 +5,11 @@ from django.urls import reverse
 
 class ProductManager(models.Manager):
     def get_queryset(self):
-        return super(ProductManager, self).get_queryset().filter(is_active=True)
+        return (
+            super(ProductManager, self)
+            .get_queryset()
+            .filter(is_active=True, in_stock=True)
+        )
 
 
 class Category(models.Model):

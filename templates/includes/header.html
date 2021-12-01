@@ -1,24 +1,20 @@
 <header class="pb-3">
+  <a class="col-12 navbar-brand text-center text-black my-2" href="/">
+  <i class="bi bi-globe"></i> MyStore 
+  </a>
+  <hr class="m-0">
   <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom">
-    <div class="container-fluid px-md-4">
-      <div class="d-flex w-100 navbar-collapse">
-        <a class="navbar-brand d-flex-inline" href="/">
-          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-asterisk"
-            viewBox="0 0 16 16">
-            <path
-              d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z" />
-          </svg>
-        </a>
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-around w-50 navbar-collapse ">
+        <ul class="navbar-nav">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-none d-md-block fw500" href="#" id="navbarDropdown" role="button"
+            <a class="btn btn-outline-secondary basket-btn border-0 dropdown-toggle d-none d-md-block fw500 text-center" href="#" id="navbarDropdown" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              Library
-              <i class="ps-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-chevron-down" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd"
-                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-                </svg></i>
+                <div>
+                  <i class="bi bi-list-columns-reverse"></i>
+                </div>
+                <span class="fs15 fw500">Products</span>
+              </a>
             </a>
             <ul class="dropdown-menu rounded-0 border-0" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="{% url "store:product_all" %}">All</a></li>
@@ -33,36 +29,22 @@
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-list"
-              viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-            </svg>
+            <i class="bi bi-list-columns-reverse"></i>
           </div>
-          <span class="fs15 fw500">Shop</span>
+          <span class="fs15 fw500">Products</span>
         </button>
 
         {% if user.is_authenticated %}
         <a type="button" role="button" href="{% url 'account:logout' %}" class="btn btn-outline-secondary border-0 basket-btn">
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-door-closed"
-              viewBox="0 0 16 16">
-              <path
-                d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z" />
-              <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z" />
-            </svg>
+            <i class="bi bi-door-closed"></i>
           </div>
           <span class="fs15 fw500">Logout</span>
         </a>
         {% else %}
         <a type="button" role="button" href="{% url 'account:login' %}" class="btn btn-outline-secondary border-0 basket-btn">
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-door-closed"
-              viewBox="0 0 16 16">
-              <path
-                d="M3 2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2zm1 13h8V2H4v13z" />
-              <path d="M9 9a1 1 0 1 0 2 0 1 1 0 0 0-2 0z" />
-            </svg>
+            <i class="bi bi-door-open"></i>
           </div>
           <span class="fs15 fw500">Login</span>
         </a>
@@ -71,11 +53,7 @@
 
         <a type="button" role="button" href="{% url 'account:dashboard' %}" class="btn btn-outline-secondary border-0 basket-btn">
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person"
-              viewBox="0 0 16 16">
-              <path
-                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
-            </svg>
+            <i class="bi bi-person-circle"></i>
           </div>
           <span class="fs15 fw500">Account</span>
         </a>
@@ -93,11 +71,7 @@
           </div>
           {% endwith %}
           <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart3"
-              viewBox="0 0 16 16">
-              <path
-                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-            </svg>
+            <i class="bi bi-basket"></i>
           </div>
           {% if basket %}
           <span class="fs15 fw500">£{{basket.get_total_price}}</span>
@@ -118,10 +92,6 @@
           </ul>
         </div>
       </div>
-      <form class="d-flex w-100 d-md-none">
-        <input class="form-control me-2" type="search" placeholder="Search products or FAQ" aria-label="Search">
-        <button class="btn btn-outline-secondary" type="submit">Search</button>
-      </form>
     </div>
   </nav>
 </header>

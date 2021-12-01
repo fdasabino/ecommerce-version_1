@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}
-{{ product.name }}
-{% endblock %}
+
+{% block title %}{% if product %}{{ product.title }}{% else %}Product{% endif %}{% endblock %}
+
 {% block content %}
 <div class="container">
-  <main class="pt-5">
+  <section>
     <div class="row g-3">
       <div class="col-md-5 col-lg-5 order-md-first bg-light">
         <img class="img-fluid mx-auto d-block" width="200px" alt="Responsive image" src="{{ product.image.url }}">
@@ -31,7 +31,6 @@
                   <option value="3">3</option>
                   <option value="4">4</option>
                 </select>
-
               </div>
               <div class="col-6 text-end">
                 <button type="button" id="add-button" value="{{product.id}}" class="btn btn-secondary btn-sm">Add to
@@ -41,10 +40,8 @@
         </div>
       </div>
     </div>
-  </main>
-
+  </section>
 </div>
-
 <script>
   $(document).on('click', '#add-button', function (e) {
     e.preventDefault();

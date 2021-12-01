@@ -1,34 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Reset Password{% endblock %}
+{% block title %}Password Reset Status{% endblock %}
 {% block content %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/account/account.css' %}">
 {% endblock extra_css%}
 
-<div class="container-fluid">
-  <div class="row no-gutter">
-    <div class="col-md-12">
-      <div class="login d-flex align-items-center py-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-6  mx-auto">
-              <div class="p-4">
-                {% if 'email' in request.get_full_path %}
-                <h3 class="mb-4">Password Reset Success</h3>
-                <p>Check your email for instructions</p>
-                {% endif%}
-                {% if 'complete' in request.get_full_path %}
-                <h3 class="mb-4">Password Reset Success</h3>
-                <a href="{% url "account:login" %}">Login</a>
-                {% endif%}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<section>
+  <div class="container">
+    {% if 'email' in request.get_full_path %}
+    <h3 class="mb-4">Password Reset Link Sent</h3>
+    <hr>
+    <p>Check your email for instructions</p>
+    {% endif%}
+    {% if 'complete' in request.get_full_path %}
+    <h3 class="mb-4">Password Reset Success</h3>
+    <hr>
+    <a href="{% url "account:dashboard" %}">Go to dashboard</a>
+    {% endif%}
   </div>
-</div>
+</section>
 {% endblock %}

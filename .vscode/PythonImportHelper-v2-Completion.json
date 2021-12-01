@@ -1146,7 +1146,7 @@
         "kind": 5,
         "importPath": "account.urls",
         "description": "account.urls",
-        "peekOfCode": "app_name = \"account\"\nurlpatterns = [\n    path(\n        \"login/\",\n        auth_views.LoginView.as_view(\n            template_name=\"account/registration/login.html\", form_class=UserLoginForm\n        ),\n        name=\"login\",\n    ),\n    path(",
+        "peekOfCode": "app_name = \"account\"\nurlpatterns = [\n    path(\n        \"login/\",\n        auth_views.LoginView.as_view(\n            template_name=\"account/user/login.html\", form_class=UserLoginForm\n        ),\n        name=\"login\",\n    ),\n    path(",
         "detail": "account.urls",
         "documentation": {}
     },
@@ -1155,7 +1155,7 @@
         "kind": 5,
         "importPath": "account.urls",
         "description": "account.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\n        \"login/\",\n        auth_views.LoginView.as_view(\n            template_name=\"account/registration/login.html\", form_class=UserLoginForm\n        ),\n        name=\"login\",\n    ),\n    path(\n        \"logout/\",",
+        "peekOfCode": "urlpatterns = [\n    path(\n        \"login/\",\n        auth_views.LoginView.as_view(\n            template_name=\"account/user/login.html\", form_class=UserLoginForm\n        ),\n        name=\"login\",\n    ),\n    path(\n        \"logout/\",",
         "detail": "account.urls",
         "documentation": {}
     },
@@ -1794,7 +1794,7 @@
         "kind": 6,
         "importPath": "store.models",
         "description": "store.models",
-        "peekOfCode": "class ProductManager(models.Manager):\n    def get_queryset(self):\n        return super(ProductManager, self).get_queryset().filter(is_active=True)\nclass Category(models.Model):\n    name = models.CharField(max_length=255, db_index=True)\n    slug = models.SlugField(max_length=255, unique=True)\n    class Meta:\n        verbose_name_plural = \"categories\"\n    def get_absolute_url(self):\n        return reverse(\"store:category_list\", args=[self.slug])",
+        "peekOfCode": "class ProductManager(models.Manager):\n    def get_queryset(self):\n        return (\n            super(ProductManager, self)\n            .get_queryset()\n            .filter(is_active=True, in_stock=True)\n        )\nclass Category(models.Model):\n    name = models.CharField(max_length=255, db_index=True)\n    slug = models.SlugField(max_length=255, unique=True)",
         "detail": "store.models",
         "documentation": {}
     },
@@ -1839,7 +1839,7 @@
         "kind": 2,
         "importPath": "store.views",
         "description": "store.views",
-        "peekOfCode": "def index(request):\n    products = Product.products.all()\n    return render(request, \"index.html\", {\"products\": products})\ndef category_list(request, category_slug=None):\n    category = get_object_or_404(Category, slug=category_slug)\n    products = Product.objects.filter(category=category)\n    return render(\n        request,\n        \"store/category.html\",\n        {\"category\": category, \"products\": products},",
+        "peekOfCode": "def index(request):\n    products = Product.products.all()\n    return render(request, \"index.html\", {\"products\": products})\ndef category_list(request, category_slug=None):\n    category = get_object_or_404(Category, slug=category_slug)\n    products = Product.products.filter(category=category)\n    return render(\n        request,\n        \"store/category.html\",\n        {\"category\": category, \"products\": products},",
         "detail": "store.views",
         "documentation": {}
     },
@@ -1848,7 +1848,7 @@
         "kind": 2,
         "importPath": "store.views",
         "description": "store.views",
-        "peekOfCode": "def category_list(request, category_slug=None):\n    category = get_object_or_404(Category, slug=category_slug)\n    products = Product.objects.filter(category=category)\n    return render(\n        request,\n        \"store/category.html\",\n        {\"category\": category, \"products\": products},\n    )\ndef product_all(request):\n    products = Product.products.all()",
+        "peekOfCode": "def category_list(request, category_slug=None):\n    category = get_object_or_404(Category, slug=category_slug)\n    products = Product.products.filter(category=category)\n    return render(\n        request,\n        \"store/category.html\",\n        {\"category\": category, \"products\": products},\n    )\ndef product_all(request):\n    products = Product.products.all()",
         "detail": "store.views",
         "documentation": {}
     },

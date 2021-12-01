@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Payment Error{% endblock %}
+{% block content %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/payment/payment.css' %}">
+{% endblock extra_css%}
+<section>
+
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="col-md-12">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-6  mx-auto">
+                <div class="p-4">
+                  <h3 class="mb-4">An error has occurred, please try again later or contact our support team</h3>
+                  <a href="/">Back to homepage</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
