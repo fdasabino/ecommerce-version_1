@@ -9,7 +9,7 @@
 
 .toast {
   position: fixed;
-  top: calc(5rem - 4px);
+  top: 8.9rem;
   right: 0;
 }
 

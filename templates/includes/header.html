@@ -49,18 +49,19 @@
           <div>
             <i class="bi bi-door-open"></i>
           </div>
-          <span class="fs15 fw500">Login</span>
+          <span class="fs15 fw500">Account</span>
         </a>
         {% endif %}
 
-
+        {% if user.is_authenticated %}
         <a type="button" role="button" href="{% url 'account:dashboard' %}"
           class="btn btn-outline-secondary border-0 basket-btn">
           <div>
             <i class="bi bi-person-circle"></i>
           </div>
-          <span class="fs15 fw500">Account</span>
+          <span class="fs15 fw500">Dashboard</span>
         </a>
+        {% endif %}
 
         <a type="button" role="button" href="{% url "basket:basket_summary" %}"
           class="btn btn-outline-secondary border-0 basket-btn">

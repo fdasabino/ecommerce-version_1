@@ -29,7 +29,7 @@
               <h6 class="my-0">{{product.title}}</h6>
               <small>{{product.description|slice:":20"}}... </small>
             </div>
-            <span>£{{product.price}} x {{item.qty}}</span>
+            <span>£{{ product.regular_price }} x {{item.qty}}</span>
           </li>
           {% endwith %}
           {% endfor %}
@@ -122,11 +122,6 @@
       </div>
     </div>
   </main>
-<script>
-    {% comment %} Make csrf token availble in JS files {% endcomment %}
-    var STRIPE_PUBLISHABLE_KEY = '{{STRIPE_PUBLISHABLE_KEY}}'
-    var CSRF_TOKEN = '{{ csrf_token }}';
-</script>
 <script src="{% static 'js/payment/payment.js' %}" data-rel-js></script>
 
 {% endblock %}

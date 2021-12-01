@@ -17,6 +17,9 @@
     integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
   </script>
   <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    var CSRF_TOKEN = '{{ csrf_token }}';
+</script>
   {% endblock core_js %}
 
   {% block core_css %}
