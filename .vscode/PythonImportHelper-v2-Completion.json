@@ -1308,7 +1308,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = \"django-insecure-4+r4fuy$0lgmo^=^9fp%7@7ca51o!s$!&95hz1tq(x@48u1we7\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1317,7 +1317,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "SECRET_KEY = \"django-insecure-4+r4fuy$0lgmo^=^9fp%7@7ca51o!s$!&95hz1tq(x@48u1we7\"\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
+        "peekOfCode": "SECRET_KEY = os.environ.get(\"SECRET_KEY\")\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"yourdomain.com\", \"127.0.0.1\", \"localhost\"]\n# Application definition\nINSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1497,7 +1497,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "AUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\n# PUBLISHABLE_KEY = ''",
+        "peekOfCode": "AUTH_USER_MODEL = \"account.UserBase\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1506,7 +1506,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "LOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\n# PUBLISHABLE_KEY = ''\n# SECRET_KEY = ''",
+        "peekOfCode": "LOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1515,7 +1515,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "LOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\n# PUBLISHABLE_KEY = ''\n# SECRET_KEY = ''\nSTRIPE_ENDPOINT_SECRET = \"whsec_Kk8Phs6J66uadUZjvCADPuPGS0wGxtJ7\"",
+        "peekOfCode": "LOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1524,7 +1524,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\n# PUBLISHABLE_KEY = ''\n# SECRET_KEY = ''\nSTRIPE_ENDPOINT_SECRET = \"whsec_Kk8Phs6J66uadUZjvCADPuPGS0wGxtJ7\"\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "peekOfCode": "EMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1533,7 +1533,25 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\n# PUBLISHABLE_KEY = ''\n# SECRET_KEY = ''\nSTRIPE_ENDPOINT_SECRET = \"whsec_Kk8Phs6J66uadUZjvCADPuPGS0wGxtJ7\"\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# Stripe Payment\nSTRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STRIPE_PUBLISHABLE_KEY",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "STRIPE_PUBLISHABLE_KEY = os.environ.get(\"STRIPE_PUBLISHABLE_KEY\")\nSTRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "detail": "core.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STRIPE_SECRET_KEY",
+        "kind": 5,
+        "importPath": "core.settings",
+        "description": "core.settings",
+        "peekOfCode": "STRIPE_SECRET_KEY = os.environ.get(\"STRIPE_SECRET_KEY\")\nSTRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1542,7 +1560,7 @@
         "kind": 5,
         "importPath": "core.settings",
         "description": "core.settings",
-        "peekOfCode": "STRIPE_ENDPOINT_SECRET = \"whsec_Kk8Phs6J66uadUZjvCADPuPGS0wGxtJ7\"\n# stripe listen --forward-to localhost:8000/payment/webhook/",
+        "peekOfCode": "STRIPE_ENDPOINT_SECRET = os.environ.get(\"STRIPE_ENDPOINT_SECRET\")\n# stripe listen --forward-to localhost:8000/payment/webhook/",
         "detail": "core.settings",
         "documentation": {}
     },
@@ -1677,7 +1695,7 @@
         "kind": 6,
         "importPath": "payment.views",
         "description": "payment.views",
-        "peekOfCode": "class Error(TemplateView):\n    template_name = \"payment/error.html\"\n@login_required\ndef BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = \"sk_test_51Jv33GGpplz6thkI6Ab7YDCpd0QEgSfNFe1lS06mZ8efPoAq1FxTGZV6Nyw8Hd7nJXMYRNj8xYRWy9fz8VHd4ECZ00hCuEZNnR\"\n    intent = stripe.PaymentIntent.create(",
+        "peekOfCode": "class Error(TemplateView):\n    template_name = \"payment/error.html\"\n@login_required\ndef BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = os.environ.get(\"STRIPE_SECRET_KEY\")\n    intent = stripe.PaymentIntent.create(",
         "detail": "payment.views",
         "documentation": {}
     },
@@ -1695,7 +1713,7 @@
         "kind": 2,
         "importPath": "payment.views",
         "description": "payment.views",
-        "peekOfCode": "def BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = \"sk_test_51Jv33GGpplz6thkI6Ab7YDCpd0QEgSfNFe1lS06mZ8efPoAq1FxTGZV6Nyw8Hd7nJXMYRNj8xYRWy9fz8VHd4ECZ00hCuEZNnR\"\n    intent = stripe.PaymentIntent.create(\n        amount=total, currency=\"gbp\", metadata={\"userid\": request.user.id}\n    )\n    return render(",
+        "peekOfCode": "def BasketView(request):\n    basket = Basket(request)\n    total = str(basket.get_total_price())\n    total = total.replace(\".\", \"\")\n    total = int(total)\n    stripe.api_key = os.environ.get(\"STRIPE_SECRET_KEY\")\n    intent = stripe.PaymentIntent.create(\n        amount=total, currency=\"gbp\", metadata={\"userid\": request.user.id}\n    )\n    return render(",
         "detail": "payment.views",
         "documentation": {}
     },
@@ -1868,6 +1886,42 @@
         "description": "store.views",
         "peekOfCode": "def product_detail(request, slug):\n    product = get_object_or_404(Product, slug=slug, in_stock=True)\n    return render(request, \"store/product_detail.html\", {\"product\": product})",
         "detail": "store.views",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"SECRET_KEY\"]",
+        "kind": 5,
+        "importPath": "env",
+        "description": "env",
+        "peekOfCode": "os.environ[\"SECRET_KEY\"] = \"9fp%7@7ca51o!s$!&95hz1tq\"\n# Stripe keys\nos.environ[\n    \"STRIPE_PUBLISHABLE_KEY\"\n] = \"pk_test_51Jv33GGpplz6thkIjVE6MVQbknOThJ766aQfGdZcb5lxRIgZyHIqqGFA50rx9AnVWwLDj3HadrvoljqgRh45wMpJ00gY7f9yNX\"\nos.environ[\n    \"STRIPE_SECRET_KEY\"\n] = \"sk_test_51Jv33GGpplz6thkI6Ab7YDCpd0QEgSfNFe1lS06mZ8efPoAq1FxTGZV6Nyw8Hd7nJXMYRNj8xYRWy9fz8VHd4ECZ00hCuEZNnR\"\nos.environ[\"STRIPE_ENDPOINT_SECRET\"] = \"whsec_Kk8Phs6J66uadUZjvCADPuPGS0wGxtJ7\"",
+        "detail": "env",
+        "documentation": {}
+    },
+    {
+        "label": "]",
+        "kind": 5,
+        "importPath": "env",
+        "description": "env",
+        "peekOfCode": "] = \"pk_test_51Jv33GGpplz6thkIjVE6MVQbknOThJ766aQfGdZcb5lxRIgZyHIqqGFA50rx9AnVWwLDj3HadrvoljqgRh45wMpJ00gY7f9yNX\"\nos.environ[\n    \"STRIPE_SECRET_KEY\"\n] = \"sk_test_51Jv33GGpplz6thkI6Ab7YDCpd0QEgSfNFe1lS06mZ8efPoAq1FxTGZV6Nyw8Hd7nJXMYRNj8xYRWy9fz8VHd4ECZ00hCuEZNnR\"\nos.environ[\"STRIPE_ENDPOINT_SECRET\"] = \"whsec_Kk8Phs6J66uadUZjvCADPuPGS0wGxtJ7\"",
+        "detail": "env",
+        "documentation": {}
+    },
+    {
+        "label": "]",
+        "kind": 5,
+        "importPath": "env",
+        "description": "env",
+        "peekOfCode": "] = \"sk_test_51Jv33GGpplz6thkI6Ab7YDCpd0QEgSfNFe1lS06mZ8efPoAq1FxTGZV6Nyw8Hd7nJXMYRNj8xYRWy9fz8VHd4ECZ00hCuEZNnR\"\nos.environ[\"STRIPE_ENDPOINT_SECRET\"] = \"whsec_Kk8Phs6J66uadUZjvCADPuPGS0wGxtJ7\"",
+        "detail": "env",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"STRIPE_ENDPOINT_SECRET\"]",
+        "kind": 5,
+        "importPath": "env",
+        "description": "env",
+        "peekOfCode": "os.environ[\"STRIPE_ENDPOINT_SECRET\"] = \"whsec_Kk8Phs6J66uadUZjvCADPuPGS0wGxtJ7\"",
+        "detail": "env",
         "documentation": {}
     },
     {
