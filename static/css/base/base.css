@@ -66,6 +66,9 @@ a {
   color: #000 !important;
 }
 
+.bi-globe {
+  color: #fff !important;
+}
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
