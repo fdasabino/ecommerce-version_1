@@ -946,6 +946,30 @@
         "documentation": {}
     },
     {
+        "label": "Order",
+        "importPath": "orders.models",
+        "description": "orders.models",
+        "isExtraImport": true,
+        "detail": "orders.models",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "orders.models",
+        "description": "orders.models",
+        "isExtraImport": true,
+        "detail": "orders.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItem",
+        "importPath": "orders.models",
+        "description": "orders.models",
+        "isExtraImport": true,
+        "detail": "orders.models",
+        "documentation": {}
+    },
+    {
         "label": "add",
         "importPath": "orders.views",
         "description": "orders.views",
@@ -1130,22 +1154,6 @@
         "description": "basket.basket",
         "isExtraImport": true,
         "detail": "basket.basket",
-        "documentation": {}
-    },
-    {
-        "label": "Order",
-        "importPath": "orders.models",
-        "description": "orders.models",
-        "isExtraImport": true,
-        "detail": "orders.models",
-        "documentation": {}
-    },
-    {
-        "label": "OrderItem",
-        "importPath": "orders.models",
-        "description": "orders.models",
-        "isExtraImport": true,
-        "detail": "orders.models",
         "documentation": {}
     },
     {
@@ -1527,7 +1535,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def delete_address(request, id):\n    address = Address.objects.filter(pk=id, customer=request.user).delete()\n    return redirect(\"account:addresses\")\n@login_required\ndef set_default(request, id):\n    Address.objects.filter(customer=request.user, default=True).update(default=False)\n    Address.objects.filter(pk=id, customer=request.user).update(default=True)\n    return redirect(\"account:addresses\")",
+        "peekOfCode": "def delete_address(request, id):\n    address = Address.objects.filter(pk=id, customer=request.user).delete()\n    return redirect(\"account:addresses\")\n@login_required\ndef set_default(request, id):\n    Address.objects.filter(customer=request.user, default=True).update(default=False)\n    Address.objects.filter(pk=id, customer=request.user).update(default=True)\n    return redirect(\"account:addresses\")\n@login_required\ndef user_orders(request):",
         "detail": "account.views",
         "documentation": {}
     },
@@ -1536,7 +1544,16 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def set_default(request, id):\n    Address.objects.filter(customer=request.user, default=True).update(default=False)\n    Address.objects.filter(pk=id, customer=request.user).update(default=True)\n    return redirect(\"account:addresses\")",
+        "peekOfCode": "def set_default(request, id):\n    Address.objects.filter(customer=request.user, default=True).update(default=False)\n    Address.objects.filter(pk=id, customer=request.user).update(default=True)\n    return redirect(\"account:addresses\")\n@login_required\ndef user_orders(request):\n    user_id = request.user.id\n    orders = Order.objects.filter(user_id=user_id).filter(billing_status=True)\n    return render(request, \"account/user/user_orders.html\", {\"orders\": orders})",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "user_orders",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def user_orders(request):\n    user_id = request.user.id\n    orders = Order.objects.filter(user_id=user_id).filter(billing_status=True)\n    return render(request, \"account/user/user_orders.html\", {\"orders\": orders})",
         "detail": "account.views",
         "documentation": {}
     },
@@ -2103,7 +2120,7 @@
         "kind": 2,
         "importPath": "orders.views",
         "description": "orders.views",
-        "peekOfCode": "def add(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        order_key = request.POST.get(\"order_key\")\n        user_id = request.user.id\n        baskettotal = basket.get_total_price()\n        # Check if order exists\n        if not Order.objects.filter(order_key=order_key).exists():\n            order = Order.objects.create(\n                user_id=user_id,",
+        "peekOfCode": "def add(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        order_key = request.POST.get(\"order_key\")\n        user_id = request.user.id\n        baskettotal = basket.get_total_price()\n        # Check if order exists\n        if Order.objects.filter(order_key=order_key).exists():\n            pass\n        else:",
         "detail": "orders.views",
         "documentation": {}
     },
