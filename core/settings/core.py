@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     "store",
     "basket",
     "account",
-    "payment",
     "orders",
     "mptt",
 ]
@@ -149,8 +148,3 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-# Stripe Payment
-STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
-STRIPE_ENDPOINT_SECRET = os.environ.get("STRIPE_ENDPOINT_SECRET")
-# stripe listen --forward-to localhost:8000/payment/webhook/
