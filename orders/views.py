@@ -14,9 +14,7 @@ def add(request):
         baskettotal = basket.get_total_price()
 
         # Check if order exists
-        if Order.objects.filter(order_key=order_key).exists():
-            pass
-        else:
+        if not Order.objects.filter(order_key=order_key).exists():
             order = Order.objects.create(
                 user_id=user_id,
                 full_name="name",
@@ -32,8 +30,7 @@ def add(request):
                     order_id=order_id, product=item["product"], price=item["price"], quantity=item["qty"]
                 )
 
-        response = JsonResponse({"success": "Return something"})
-        return response
+        return JsonResponse({"success": "Return something"})
 
 
 def payment_confirmation(data):

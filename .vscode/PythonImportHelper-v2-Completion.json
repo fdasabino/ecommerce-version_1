@@ -2120,7 +2120,7 @@
         "kind": 2,
         "importPath": "orders.views",
         "description": "orders.views",
-        "peekOfCode": "def add(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        order_key = request.POST.get(\"order_key\")\n        user_id = request.user.id\n        baskettotal = basket.get_total_price()\n        # Check if order exists\n        if Order.objects.filter(order_key=order_key).exists():\n            pass\n        else:",
+        "peekOfCode": "def add(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        order_key = request.POST.get(\"order_key\")\n        user_id = request.user.id\n        baskettotal = basket.get_total_price()\n        # Check if order exists\n        if not Order.objects.filter(order_key=order_key).exists():\n            order = Order.objects.create(\n                user_id=user_id,",
         "detail": "orders.views",
         "documentation": {}
     },
