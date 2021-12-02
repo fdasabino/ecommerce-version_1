@@ -1,5 +1,4 @@
 from basket.basket import Basket
-from django.contrib import messages
 from django.http.response import JsonResponse
 from django.shortcuts import render
 
@@ -28,10 +27,7 @@ def add(request):
 
             for item in basket:
                 OrderItem.objects.create(
-                    order_id=order_id,
-                    product=item["product"],
-                    price=item["price"],
-                    quantity=item["qty"],
+                    order_id=order_id, product=item["product"], price=item["price"], quantity=item["qty"]
                 )
 
         return JsonResponse({"success": "Return something"})

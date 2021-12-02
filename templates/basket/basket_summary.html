@@ -21,7 +21,7 @@
       {% if basket|length == 0 %}
       <div class="col-12">Your basket is empty <a href="{% url 'store:store_home' %}">Shop</a></div>
       {% else %}
-      <div class="col-12 bg-light p-3 d-flex justify-content-between">
+      <div class="col-12 p-3 d-flex justify-content-between">
         <div class="d-flex d-flex-inline">
           <div class="pe-3">Order</div>
           <div class="dropdown">
@@ -41,17 +41,14 @@
           </div>
         </div>
         <div class="text-end">
-          <div class="">Sub Total: <span class="fw-bold">£</span>
-            <div id="subtotal" class="d-inline-flex fw-bold">{{basket.get_subtotal_price}}</div>
+          <div class="">Sub Total: <div id="subtotal" class="d-inline-flex fw-bold">£{{basket.get_subtotal_price}}</div>
           </div>
-          <div id="">Shipping <span class="small">(Next day delivery)</span>: <span class="fw-bold">£11.50</span></div>
-          <div class="pt-2">Total to pay: <span class="fw-bold h5">£</span><span id="total"
-              class="fw-bold h5">{{basket.get_total_price}}</span></div>
         </div>
       </div>
       <div class="col-md-5 col-lg-4 order-md-last p-0 order-3">
         <div class="d-grid gap-2 ">
-          <a role="button" href="" class="btn btn-success fw-bold" type="button">Checkout</a>
+          <a role="button" href="{% url 'checkout:deliverychoices' %}" class="btn btn-success fw-bold"
+            type="button">Checkout Securely</a>
           <a role="button" href="{% url "store:product_all" %}" class="btn btn-outline-dark fw-bold" type="button">Back
             to Products</a>
         </div>

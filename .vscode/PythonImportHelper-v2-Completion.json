@@ -128,6 +128,78 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -290,14 +362,6 @@
         "documentation": {}
     },
     {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
         "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -314,11 +378,35 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
         "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -466,6 +554,22 @@
         "documentation": {}
     },
     {
+        "label": "gettext_lazy",
+        "importPath": "django.utils.translation",
+        "description": "django.utils.translation",
+        "isExtraImport": true,
+        "detail": "django.utils.translation",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -602,6 +706,22 @@
         "documentation": {}
     },
     {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -658,11 +778,35 @@
         "documentation": {}
     },
     {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
         "label": "get_current_site",
         "importPath": "django.contrib.sites.shortcuts",
         "description": "django.contrib.sites.shortcuts",
         "isExtraImport": true,
         "detail": "django.contrib.sites.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponseRedirect",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
         "documentation": {}
     },
     {
@@ -715,6 +859,14 @@
     },
     {
         "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
         "isExtraImport": true,
@@ -906,12 +1058,102 @@
         "documentation": {}
     },
     {
+        "label": "DeliveryOptions",
+        "importPath": "checkout.models",
+        "description": "checkout.models",
+        "isExtraImport": true,
+        "detail": "checkout.models",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "os",
         "description": "os",
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "PayPalHttpClient",
+        "importPath": "paypalcheckoutsdk.core",
+        "description": "paypalcheckoutsdk.core",
+        "isExtraImport": true,
+        "detail": "paypalcheckoutsdk.core",
+        "documentation": {}
+    },
+    {
+        "label": "SandboxEnvironment",
+        "importPath": "paypalcheckoutsdk.core",
+        "description": "paypalcheckoutsdk.core",
+        "isExtraImport": true,
+        "detail": "paypalcheckoutsdk.core",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Address",
+        "importPath": "account.models",
+        "description": "account.models",
+        "isExtraImport": true,
+        "detail": "account.models",
+        "documentation": {}
+    },
+    {
+        "label": "Basket",
+        "importPath": "basket.basket",
+        "description": "basket.basket",
+        "isExtraImport": true,
+        "detail": "basket.basket",
+        "documentation": {}
+    },
+    {
+        "label": "Basket",
+        "importPath": "basket.basket",
+        "description": "basket.basket",
+        "isExtraImport": true,
+        "detail": "basket.basket",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "orders.models",
+        "description": "orders.models",
+        "isExtraImport": true,
+        "detail": "orders.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItem",
+        "importPath": "orders.models",
+        "description": "orders.models",
+        "isExtraImport": true,
+        "detail": "orders.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrdersGetRequest",
+        "importPath": "paypalcheckoutsdk.orders",
+        "description": "paypalcheckoutsdk.orders",
+        "isExtraImport": true,
+        "detail": "paypalcheckoutsdk.orders",
         "documentation": {}
     },
     {
@@ -962,14 +1204,6 @@
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
-        "documentation": {}
-    },
-    {
-        "label": "Basket",
-        "importPath": "basket.basket",
-        "description": "basket.basket",
-        "isExtraImport": true,
-        "detail": "basket.basket",
         "documentation": {}
     },
     {
@@ -1052,15 +1286,6 @@
         "description": "django.core",
         "isExtraImport": true,
         "detail": "django.core",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
         "documentation": {}
     },
     {
@@ -1406,6 +1631,132 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "checkout.migrations.0001_initial",
+        "description": "checkout.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='DeliveryOptions',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('delivery_name', models.CharField(help_text='Required', max_length=255, verbose_name='delivery_name')),",
+        "detail": "checkout.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "checkout.migrations.0002_alter_deliveryoptions_order",
+        "description": "checkout.migrations.0002_alter_deliveryoptions_order",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('checkout', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='deliveryoptions',\n            name='order',\n            field=models.PositiveIntegerField(default=0, help_text='Required', verbose_name='list order'),\n        ),",
+        "detail": "checkout.migrations.0002_alter_deliveryoptions_order",
+        "documentation": {}
+    },
+    {
+        "label": "CheckoutConfig",
+        "kind": 6,
+        "importPath": "checkout.apps",
+        "description": "checkout.apps",
+        "peekOfCode": "class CheckoutConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'checkout'",
+        "detail": "checkout.apps",
+        "documentation": {}
+    },
+    {
+        "label": "DeliveryOptions",
+        "kind": 6,
+        "importPath": "checkout.models",
+        "description": "checkout.models",
+        "peekOfCode": "class DeliveryOptions(models.Model):\n    \"\"\"\n    The Delivery methods table contining all delivery\n    \"\"\"\n    DELIVERY_CHOICES = [\n        (\"IS\", \"In Store\"),\n        (\"HD\", \"Home Delivery\"),\n        (\"DD\", \"Digital Delivery\"),\n    ]\n    delivery_name = models.CharField(",
+        "detail": "checkout.models",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentSelections",
+        "kind": 6,
+        "importPath": "checkout.models",
+        "description": "checkout.models",
+        "peekOfCode": "class PaymentSelections(models.Model):\n    \"\"\"\n    Store payment options\n    \"\"\"\n    name = models.CharField(\n        verbose_name=_(\"name\"),\n        help_text=_(\"Required\"),\n        max_length=255,\n    )\n    is_active = models.BooleanField(default=True)",
+        "detail": "checkout.models",
+        "documentation": {}
+    },
+    {
+        "label": "PayPalClient",
+        "kind": 6,
+        "importPath": "checkout.paypal",
+        "description": "checkout.paypal",
+        "peekOfCode": "class PayPalClient:\n    def __init__(self):\n        self.client_id = os.environ.get(\"CLIENT_ID\")\n        self.client_secret = os.environ.get(\"CLIENT_SECRET\")\n        self.environment = SandboxEnvironment(client_id=self.client_id, client_secret=self.client_secret)\n        self.client = PayPalHttpClient(self.environment)",
+        "detail": "checkout.paypal",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "checkout.urls",
+        "description": "checkout.urls",
+        "peekOfCode": "app_name = \"checkout\"\nurlpatterns = [\n    path(\"deliverychoices\", views.deliverychoices, name=\"deliverychoices\"),\n    path(\"basket_update_delivery/\", views.basket_update_delivery, name=\"basket_update_delivery\"),\n    path(\"delivery_address/\", views.delivery_address, name=\"delivery_address\"),\n    path(\"payment_selection/\", views.payment_selection, name=\"payment_selection\"),\n    path(\"payment_complete/\", views.payment_complete, name=\"payment_complete\"),\n    path(\"payment_successful/\", views.payment_successful, name=\"payment_successful\"),\n]",
+        "detail": "checkout.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "checkout.urls",
+        "description": "checkout.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"deliverychoices\", views.deliverychoices, name=\"deliverychoices\"),\n    path(\"basket_update_delivery/\", views.basket_update_delivery, name=\"basket_update_delivery\"),\n    path(\"delivery_address/\", views.delivery_address, name=\"delivery_address\"),\n    path(\"payment_selection/\", views.payment_selection, name=\"payment_selection\"),\n    path(\"payment_complete/\", views.payment_complete, name=\"payment_complete\"),\n    path(\"payment_successful/\", views.payment_successful, name=\"payment_successful\"),\n]",
+        "detail": "checkout.urls",
+        "documentation": {}
+    },
+    {
+        "label": "deliverychoices",
+        "kind": 2,
+        "importPath": "checkout.views",
+        "description": "checkout.views",
+        "peekOfCode": "def deliverychoices(request):\n    deliveryoptions = DeliveryOptions.objects.filter(is_active=True)\n    return render(request, \"checkout/delivery_choices.html\", {\"deliveryoptions\": deliveryoptions})\n@login_required\ndef basket_update_delivery(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        delivery_option = int(request.POST.get(\"deliveryoption\"))\n        delivery_type = DeliveryOptions.objects.get(id=delivery_option)\n        updated_total_price = basket.basket_update_delivery(delivery_type.delivery_price)",
+        "detail": "checkout.views",
+        "documentation": {}
+    },
+    {
+        "label": "basket_update_delivery",
+        "kind": 2,
+        "importPath": "checkout.views",
+        "description": "checkout.views",
+        "peekOfCode": "def basket_update_delivery(request):\n    basket = Basket(request)\n    if request.POST.get(\"action\") == \"post\":\n        delivery_option = int(request.POST.get(\"deliveryoption\"))\n        delivery_type = DeliveryOptions.objects.get(id=delivery_option)\n        updated_total_price = basket.basket_update_delivery(delivery_type.delivery_price)\n        session = request.session\n        if \"purchase\" not in request.session:\n            session[\"purchase\"] = {\n                \"delivery_id\": delivery_type.id,",
+        "detail": "checkout.views",
+        "documentation": {}
+    },
+    {
+        "label": "delivery_address",
+        "kind": 2,
+        "importPath": "checkout.views",
+        "description": "checkout.views",
+        "peekOfCode": "def delivery_address(request):\n    session = request.session\n    if \"purchase\" not in request.session:\n        messages.add_message(request, messages.WARNING, \"Please select a delivery option\")\n        return HttpResponseRedirect(request.META[\"HTTP_REFERER\"])\n    addresses = Address.objects.filter(customer=request.user).order_by(\"-default\")\n    if \"address\" not in request.session:\n        session[\"address\"] = {\"address_id\": str(addresses[0].id)}\n    else:\n        session[\"address\"][\"address_id\"] = str(addresses[0].id)",
+        "detail": "checkout.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment_selection",
+        "kind": 2,
+        "importPath": "checkout.views",
+        "description": "checkout.views",
+        "peekOfCode": "def payment_selection(request):\n    session = request.session\n    if \"address\" not in request.session:\n        messages.add_message(request, messages.WARNING, \"Please select an address\")\n        return HttpResponseRedirect(request.META[\"HTTP_REFERER\"])\n    return render(request, \"checkout/payment_selection.html\", {})\n# PayPal\nfrom paypalcheckoutsdk.orders import OrdersGetRequest\nfrom .paypal import PayPalClient\n@login_required",
+        "detail": "checkout.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment_complete",
+        "kind": 2,
+        "importPath": "checkout.views",
+        "description": "checkout.views",
+        "peekOfCode": "def payment_complete(request):\n    PPClient = PayPalClient()\n    body = json.loads(request.body)\n    data = body[\"orderID\"]\n    user_id = request.user.id\n    requestorder = OrdersGetRequest(data)\n    response = PPClient.client.execute(requestorder)\n    total_paid = response.result.purchase_units[0].amount.value\n    basket = Basket(request)\n    order = Order.objects.create(",
+        "detail": "checkout.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment_successful",
+        "kind": 2,
+        "importPath": "checkout.views",
+        "description": "checkout.views",
+        "peekOfCode": "def payment_successful(request):\n    basket = Basket(request)\n    basket.clear()\n    messages.add_message(request, messages.SUCCESS, \"Payment completed successfully\")\n    return render(request, \"checkout/payment_successful.html\", {})",
+        "detail": "checkout.views",
+        "documentation": {}
+    },
+    {
         "label": "BASE_DIR",
         "kind": 5,
         "importPath": "core.settings.core",
@@ -1563,7 +1914,7 @@
         "kind": 5,
         "importPath": "core.settings.core",
         "description": "core.settings.core",
-        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"",
+        "peekOfCode": "STATIC_URL = \"/static/\"\nSTATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# PAYPAL\nCLIENT_SECRET = os.environ.get(\"CLIENT_SECRET\")",
         "detail": "core.settings.core",
         "documentation": {}
     },
@@ -1572,7 +1923,7 @@
         "kind": 5,
         "importPath": "core.settings.core",
         "description": "core.settings.core",
-        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type",
+        "peekOfCode": "STATICFILES_DIRS = [os.path.join(BASE_DIR, \"static\")]\nMEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# PAYPAL\nCLIENT_SECRET = os.environ.get(\"CLIENT_SECRET\")\nCLIENT_ID = os.environ.get(\"CLIENT_ID\")",
         "detail": "core.settings.core",
         "documentation": {}
     },
@@ -1581,7 +1932,7 @@
         "kind": 5,
         "importPath": "core.settings.core",
         "description": "core.settings.core",
-        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
+        "peekOfCode": "MEDIA_URL = \"/media/\"\nMEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# PAYPAL\nCLIENT_SECRET = os.environ.get(\"CLIENT_SECRET\")\nCLIENT_ID = os.environ.get(\"CLIENT_ID\")\n# Email setting",
         "detail": "core.settings.core",
         "documentation": {}
     },
@@ -1590,7 +1941,7 @@
         "kind": 5,
         "importPath": "core.settings.core",
         "description": "core.settings.core",
-        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "MEDIA_ROOT = os.path.join(BASE_DIR, \"media/\")\n# Custom user model\nAUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# PAYPAL\nCLIENT_SECRET = os.environ.get(\"CLIENT_SECRET\")\nCLIENT_ID = os.environ.get(\"CLIENT_ID\")\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"",
         "detail": "core.settings.core",
         "documentation": {}
     },
@@ -1599,7 +1950,7 @@
         "kind": 5,
         "importPath": "core.settings.core",
         "description": "core.settings.core",
-        "peekOfCode": "AUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "AUTH_USER_MODEL = \"account.Customer\"\nLOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# PAYPAL\nCLIENT_SECRET = os.environ.get(\"CLIENT_SECRET\")\nCLIENT_ID = os.environ.get(\"CLIENT_ID\")\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field",
         "detail": "core.settings.core",
         "documentation": {}
     },
@@ -1608,7 +1959,7 @@
         "kind": 5,
         "importPath": "core.settings.core",
         "description": "core.settings.core",
-        "peekOfCode": "LOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "LOGIN_REDIRECT_URL = \"/account/dashboard\"\nLOGIN_URL = \"/account/login/\"\n# PAYPAL\nCLIENT_SECRET = os.environ.get(\"CLIENT_SECRET\")\nCLIENT_ID = os.environ.get(\"CLIENT_ID\")\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
         "detail": "core.settings.core",
         "documentation": {}
     },
@@ -1617,7 +1968,25 @@
         "kind": 5,
         "importPath": "core.settings.core",
         "description": "core.settings.core",
-        "peekOfCode": "LOGIN_URL = \"/account/login/\"\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "LOGIN_URL = \"/account/login/\"\n# PAYPAL\nCLIENT_SECRET = os.environ.get(\"CLIENT_SECRET\")\nCLIENT_ID = os.environ.get(\"CLIENT_ID\")\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "CLIENT_SECRET",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "CLIENT_SECRET = os.environ.get(\"CLIENT_SECRET\")\nCLIENT_ID = os.environ.get(\"CLIENT_ID\")\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "detail": "core.settings.core",
+        "documentation": {}
+    },
+    {
+        "label": "CLIENT_ID",
+        "kind": 5,
+        "importPath": "core.settings.core",
+        "description": "core.settings.core",
+        "peekOfCode": "CLIENT_ID = os.environ.get(\"CLIENT_ID\")\n# Email setting\nEMAIL_BACKEND = \"django.core.mail.backends.console.EmailBackend\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
         "detail": "core.settings.core",
         "documentation": {}
     },
@@ -1653,7 +2022,7 @@
         "kind": 5,
         "importPath": "core.urls",
         "description": "core.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"store.urls\", namespace=\"store\")),\n    path(\"basket/\", include(\"basket.urls\", namespace=\"basket\")),\n    path(\"account/\", include(\"account.urls\", namespace=\"account\")),\n    path(\"orders/\", include(\"orders.urls\", namespace=\"orders\")),\n    path(\"__debug__/\", include(debug_toolbar.urls)),\n]\nif settings.DEBUG:\n    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path(\"admin/\", admin.site.urls),\n    path(\"\", include(\"store.urls\", namespace=\"store\")),\n    path(\"basket/\", include(\"basket.urls\", namespace=\"basket\")),\n    path(\"checkout/\", include(\"checkout.urls\", namespace=\"checkout\")),\n    path(\"account/\", include(\"account.urls\", namespace=\"account\")),\n    path(\"orders/\", include(\"orders.urls\", namespace=\"orders\")),\n    path(\"__debug__/\", include(debug_toolbar.urls)),\n]\nif settings.DEBUG:",
         "detail": "core.urls",
         "documentation": {}
     },
@@ -1676,6 +2045,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "orders.migrations.0002_auto_20211202_1203",
+        "description": "orders.migrations.0002_auto_20211202_1203",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('orders', '0001_initial'),\n    ]\n    operations = [\n        migrations.RenameField(\n            model_name='order',\n            old_name='post_code',\n            new_name='postal_code',\n        ),",
+        "detail": "orders.migrations.0002_auto_20211202_1203",
+        "documentation": {}
+    },
+    {
         "label": "OrdersConfig",
         "kind": 6,
         "importPath": "orders.apps",
@@ -1689,7 +2067,7 @@
         "kind": 6,
         "importPath": "orders.models",
         "description": "orders.models",
-        "peekOfCode": "class Order(models.Model):\n    user = models.ForeignKey(\n        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name=\"order_user\"\n    )\n    full_name = models.CharField(max_length=50)\n    address1 = models.CharField(max_length=250)\n    address2 = models.CharField(max_length=250)\n    city = models.CharField(max_length=100)\n    phone = models.CharField(max_length=100)\n    post_code = models.CharField(max_length=20)",
+        "peekOfCode": "class Order(models.Model):\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name=\"order_user\")\n    full_name = models.CharField(max_length=50)\n    email = models.EmailField(max_length=254, blank=True)\n    address1 = models.CharField(max_length=250)\n    address2 = models.CharField(max_length=250)\n    city = models.CharField(max_length=100)\n    phone = models.CharField(max_length=100)\n    postal_code = models.CharField(max_length=20)\n    country_code = models.CharField(max_length=4, blank=True)",
         "detail": "orders.models",
         "documentation": {}
     },
@@ -1698,7 +2076,7 @@
         "kind": 6,
         "importPath": "orders.models",
         "description": "orders.models",
-        "peekOfCode": "class OrderItem(models.Model):\n    order = models.ForeignKey(Order, related_name=\"items\", on_delete=models.CASCADE)\n    product = models.ForeignKey(\n        Product, related_name=\"order_items\", on_delete=models.CASCADE\n    )\n    price = models.DecimalField(max_digits=5, decimal_places=2)\n    quantity = models.PositiveIntegerField(default=1)\n    def __str__(self):\n        return str(self.id)",
+        "peekOfCode": "class OrderItem(models.Model):\n    order = models.ForeignKey(Order, related_name=\"items\", on_delete=models.CASCADE)\n    product = models.ForeignKey(Product, related_name=\"order_items\", on_delete=models.CASCADE)\n    price = models.DecimalField(max_digits=5, decimal_places=2)\n    quantity = models.PositiveIntegerField(default=1)\n    def __str__(self):\n        return str(self.id)",
         "detail": "orders.models",
         "documentation": {}
     },
@@ -1799,6 +2177,15 @@
         "description": "store.migrations.0006_alter_category_slug",
         "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('store', '0005_alter_category_slug'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='category',\n            name='slug',\n            field=models.SlugField(max_length=255, unique=True, verbose_name='Category safe URL'),\n        ),",
         "detail": "store.migrations.0006_alter_category_slug",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "store.migrations.0007_alter_producttype_name",
+        "description": "store.migrations.0007_alter_producttype_name",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('store', '0006_alter_category_slug'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='producttype',\n            name='name',\n            field=models.CharField(help_text='Required', max_length=255, unique=True, verbose_name='Product Type'),\n        ),",
+        "detail": "store.migrations.0007_alter_producttype_name",
         "documentation": {}
     },
     {
@@ -2013,7 +2400,25 @@
         "kind": 5,
         "importPath": "env",
         "description": "env",
-        "peekOfCode": "os.environ[\"SECRET_KEY\"] = \"9fp%7@7ca51o!s$!&95hz1tq\"",
+        "peekOfCode": "os.environ[\"SECRET_KEY\"] = \"9fp%7@7ca51o!s$!&95hz1tq\"\n# paypal\nos.environ[\"CLIENT_SECRET\"] = \"EIbeu_NbDi6MTgFCZOy8BTJISfvEgxGqsLn9sO3acG9ZsBL5eptHI_KoyGC2gzx609KNE6J64wyKP0tz\"\nos.environ[\"CLIENT_ID\"] = \"ARvxiPSbJ1c43vOjO3zGx_-uHeVFlLUCdgEanFaMyTOs3nEzBqii8tNU7Rc-9zJiRuKaZtD7tZiZKgmE\"",
+        "detail": "env",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"CLIENT_SECRET\"]",
+        "kind": 5,
+        "importPath": "env",
+        "description": "env",
+        "peekOfCode": "os.environ[\"CLIENT_SECRET\"] = \"EIbeu_NbDi6MTgFCZOy8BTJISfvEgxGqsLn9sO3acG9ZsBL5eptHI_KoyGC2gzx609KNE6J64wyKP0tz\"\nos.environ[\"CLIENT_ID\"] = \"ARvxiPSbJ1c43vOjO3zGx_-uHeVFlLUCdgEanFaMyTOs3nEzBqii8tNU7Rc-9zJiRuKaZtD7tZiZKgmE\"",
+        "detail": "env",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"CLIENT_ID\"]",
+        "kind": 5,
+        "importPath": "env",
+        "description": "env",
+        "peekOfCode": "os.environ[\"CLIENT_ID\"] = \"ARvxiPSbJ1c43vOjO3zGx_-uHeVFlLUCdgEanFaMyTOs3nEzBqii8tNU7Rc-9zJiRuKaZtD7tZiZKgmE\"",
         "detail": "env",
         "documentation": {}
     },

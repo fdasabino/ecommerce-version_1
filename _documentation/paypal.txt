@@ -1,0 +1,27 @@
+Mock cards for testing purposes:
+--------------------------------
+Card Type: Visa
+
+Card Number: 4032030406952409
+
+Expiration Date: 04/2025
+
+CVV: 448
+---------------------------------
+
+Card Type: MasterCard
+
+Card Number: 5110926310812211
+
+Expiration Date: 12/2025
+
+CVV: 970
+---------------------------------
+
+Card Type: Amex
+
+Card Number: 340117922777181
+
+Expiration Date: 04/2023
+
+CVV: 9277

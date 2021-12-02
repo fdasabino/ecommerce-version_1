@@ -1,10 +1,10 @@
 <header class="pb-3">
-  <div class="row bg-dark m-0">
+  <div class="row bg-black m-0">
     <a class="col-12 navbar-brand text-center text-white py-2" href="/">
       <i class="bi bi-globe"></i> MyStore
     </a>
   </div>
-  <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom border-top">
+  <nav class="navbar navbar-expand-md bg-light border-bottom border-top">
     <div class="container-fluid">
       <div class="d-flex justify-content-around w-50 navbar-collapse ">
         <ul class="navbar-nav">
@@ -37,7 +37,7 @@
 
         {% if user.is_authenticated %}
         <a type="button" role="button" href="{% url 'account:logout' %}"
-          class="btn btn-outline-secondary border-0 basket-btn">
+          class="btn btn-outline-secondary border-0 text-black basket-btn">
           <div>
             <i class="bi bi-door-closed"></i>
           </div>
@@ -45,7 +45,7 @@
         </a>
         {% else %}
         <a type="button" role="button" href="{% url 'account:login' %}"
-          class="btn btn-outline-secondary border-0 basket-btn">
+          class="btn btn-outline-secondary border-0 text-black basket-btn">
           <div>
             <i class="bi bi-door-open"></i>
           </div>
@@ -55,7 +55,7 @@
 
         {% if user.is_authenticated %}
         <a type="button" role="button" href="{% url 'account:dashboard' %}"
-          class="btn btn-outline-secondary border-0 basket-btn">
+          class="btn btn-outline-secondary border-0 text-black basket-btn">
           <div>
             <i class="bi bi-person-circle"></i>
           </div>
@@ -64,7 +64,7 @@
         {% endif %}
 
         <a type="button" role="button" href="{% url "basket:basket_summary" %}"
-          class="btn btn-outline-secondary border-0 basket-btn">
+          class="btn btn-outline-secondary border-0 text-black basket-btn">
 
           {% with total_qty=basket|length %}
           <div id="basket-qty" class="basket-qty">

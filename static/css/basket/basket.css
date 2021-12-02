@@ -25,11 +25,7 @@
   border-radius: 0;
 }
 
-.basket-btn:hover,
-.basket-btn:focus,
-.basket-btn:active,
-.basket-btn.active {
-  color: #000000;
+.basket-btn:hover {
   transition-duration: 0.4s;
-  background-color: transparent;
+  background-color: rgba(3, 212, 83, 0.158);
 }

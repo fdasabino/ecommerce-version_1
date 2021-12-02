@@ -63,7 +63,15 @@ a {
 }
 
 .bi-globe {
-  color: #fff !important;
+  color: rgb(255, 255, 255) !important;
+}
+
+.bg-light {
+  background-color: #C2E5D3 !important;
+}
+
+.logo {
+  font-size: 40px
 }
 
 /* Fonts */

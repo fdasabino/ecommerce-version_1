@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     "basket",
     "account",
     "orders",
+    "checkout",
     "mptt",
+    "core",
 ]
 
 MIDDLEWARE = [
@@ -140,6 +142,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 AUTH_USER_MODEL = "account.Customer"
 LOGIN_REDIRECT_URL = "/account/dashboard"
 LOGIN_URL = "/account/login/"
+
+# PAYPAL
+
+CLIENT_SECRET = os.environ.get("CLIENT_SECRET")
+CLIENT_ID = os.environ.get("CLIENT_ID")
+
 
 # Email setting
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
