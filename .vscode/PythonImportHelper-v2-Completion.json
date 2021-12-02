@@ -48,6 +48,38 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -97,6 +129,54 @@
     },
     {
         "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -610,14 +690,6 @@
         "documentation": {}
     },
     {
-        "label": "HttpResponse",
-        "importPath": "django.http",
-        "description": "django.http",
-        "isExtraImport": true,
-        "detail": "django.http",
-        "documentation": {}
-    },
-    {
         "label": "HttpResponseRedirect",
         "importPath": "django.http",
         "description": "django.http",
@@ -639,6 +711,14 @@
         "description": "django.http",
         "isExtraImport": true,
         "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -746,6 +826,14 @@
         "documentation": {}
     },
     {
+        "label": "add",
+        "importPath": "orders.views",
+        "description": "orders.views",
+        "isExtraImport": true,
+        "detail": "orders.views",
+        "documentation": {}
+    },
+    {
         "label": "user_orders",
         "importPath": "orders.views",
         "description": "orders.views",
@@ -759,6 +847,14 @@
         "description": "orders.views",
         "isExtraImport": true,
         "detail": "orders.views",
+        "documentation": {}
+    },
+    {
+        "label": "Product",
+        "importPath": "store.models",
+        "description": "store.models",
+        "isExtraImport": true,
+        "detail": "store.models",
         "documentation": {}
     },
     {
@@ -1193,6 +1289,24 @@
         "documentation": {}
     },
     {
+        "label": "wishlist",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def wishlist(request):\n    products = Product.objects.filter(users_wishlist=request.user)\n    return render(request, \"account/user/user_wishlist.html\", {\"wishlist\": products})\n@login_required\ndef add_to_wishlist(request, id):\n    product = get_object_or_404(Product, id=id)\n    if product.users_wishlist.filter(id=request.user.id).exists():\n        product.users_wishlist.remove(request.user)\n        messages.add_message(request, messages.WARNING, product.title + \" has been removed from your Wishlist\")\n    else:",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "add_to_wishlist",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def add_to_wishlist(request, id):\n    product = get_object_or_404(Product, id=id)\n    if product.users_wishlist.filter(id=request.user.id).exists():\n        product.users_wishlist.remove(request.user)\n        messages.add_message(request, messages.WARNING, product.title + \" has been removed from your Wishlist\")\n    else:\n        product.users_wishlist.add(request.user)\n        messages.add_message(request, messages.SUCCESS, product.title + \" has been added to your Wishlist\")\n    return HttpResponseRedirect(request.META[\"HTTP_REFERER\"])\n@login_required",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
         "label": "dashboard",
         "kind": 2,
         "importPath": "account.views",
@@ -1215,7 +1329,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def delete_user(request):\n    user = Customer.objects.get(user_name=request.user)\n    user.is_active = False\n    user.save()\n    logout(request)\n    messages.add_message(request, messages.WARNING, \"Account deleted successfully\")\n    return redirect(\"account:delete_confirmation\")\ndef account_register(request):\n    if request.user.is_authenticated:\n        return redirect(\"account:dashboard\")",
+        "peekOfCode": "def delete_user(request):\n    user = Customer.objects.get(user_name=request.user)\n    user.is_active = False\n    user.save()\n    logout(request)\n    messages.add_message(request, messages.SUCCESS, \"Account deleted successfully\")\n    return redirect(\"account:delete_confirmation\")\ndef account_register(request):\n    if request.user.is_authenticated:\n        # message",
         "detail": "account.views",
         "documentation": {}
     },
@@ -1224,7 +1338,16 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def account_register(request):\n    if request.user.is_authenticated:\n        return redirect(\"account:dashboard\")\n    if request.method == \"POST\":\n        registerForm = RegistrationForm(request.POST)\n        if registerForm.is_valid():\n            user = registerForm.save(commit=False)\n            user.email = registerForm.cleaned_data[\"email\"]\n            user.set_password(registerForm.cleaned_data[\"password\"])\n            user.is_active = False",
+        "peekOfCode": "def account_register(request):\n    if request.user.is_authenticated:\n        # message\n        return redirect(\"account:dashboard\")\n    if request.method == \"POST\":\n        registerForm = RegistrationForm(request.POST)\n        if registerForm.is_valid():\n            return account_register_email(registerForm, request)\n    else:\n        registerForm = RegistrationForm()",
+        "detail": "account.views",
+        "documentation": {}
+    },
+    {
+        "label": "account_register_email",
+        "kind": 2,
+        "importPath": "account.views",
+        "description": "account.views",
+        "peekOfCode": "def account_register_email(registerForm, request):\n    user = registerForm.save(commit=False)\n    user.email = registerForm.cleaned_data[\"email\"]\n    user.set_password(registerForm.cleaned_data[\"password\"])\n    user.is_active = False\n    user.save()\n    current_site = get_current_site(request)\n    subject = \"Activate your Account\"\n    message = render_to_string(\n        \"account/registration/account_activation_email.html\",",
         "detail": "account.views",
         "documentation": {}
     },
@@ -1233,7 +1356,7 @@
         "kind": 2,
         "importPath": "account.views",
         "description": "account.views",
-        "peekOfCode": "def account_activate(request, uidb64, token):\n    try:\n        uid = force_text(urlsafe_base64_decode(uidb64))\n        user = Customer.objects.get(pk=uid)\n    except (TypeError, ValueError, OverflowError, user.DoesNotExist):\n        user = None\n    if user is not None and account_activation_token.check_token(user, token):\n        user.is_active = True\n        user.save()\n        messages.add_message(request, messages.SUCCESS, \"Account activated successfully, please login.\")",
+        "peekOfCode": "def account_activate(request, uidb64, token):\n    try:\n        uid = force_text(urlsafe_base64_decode(uidb64))\n        user = Customer.objects.get(pk=uid)\n    except (TypeError, ValueError, OverflowError):\n        user = None\n    if user is None or not account_activation_token.check_token(user, token):\n        return render(request, \"account/registration/activation_invalid.html\")\n    user.is_active = True\n    user.save()",
         "detail": "account.views",
         "documentation": {}
     },
@@ -1802,6 +1925,33 @@
         "description": "store.migrations.0001_initial",
         "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Category',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(help_text='Required and unique', max_length=255, unique=True, verbose_name='Category Name')),",
         "detail": "store.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "store.migrations.0002_product_users_wishlist",
+        "description": "store.migrations.0002_product_users_wishlist",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('store', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='product',\n            name='users_wishlist',\n            field=models.ManyToManyField(blank=True, related_name='user_wishlist', to=settings.AUTH_USER_MODEL),",
+        "detail": "store.migrations.0002_product_users_wishlist",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "store.migrations.0003_auto_20211202_0140",
+        "description": "store.migrations.0003_auto_20211202_0140",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('store', '0002_product_users_wishlist'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='product',\n            name='users_wishlist',\n        ),",
+        "detail": "store.migrations.0003_auto_20211202_0140",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "store.migrations.0004_auto_20211202_0151",
+        "description": "store.migrations.0004_auto_20211202_0151",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n        ('store', '0003_auto_20211202_0140'),\n    ]\n    operations = [\n        migrations.RemoveField(\n            model_name='product',\n            name='users_saved_items',\n        ),",
+        "detail": "store.migrations.0004_auto_20211202_0151",
         "documentation": {}
     },
     {

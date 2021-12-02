@@ -52,7 +52,8 @@
       <div class="col-md-5 col-lg-4 order-md-last p-0 order-3">
         <div class="d-grid gap-2 ">
           <a role="button" href="{% url "payment:basket" %}" class="btn btn-success fw-bold" type="button">Checkout</a>
-          <button class="btn btn-light" type="button">Save for later</button>
+          <a role="button" href="{% url "store:product_all" %}" class="btn btn-outline-dark fw-bold" type="button">Back
+            to Products</a>
         </div>
       </div>
       <div class="col-md-7 col-lg-8 p-0">
@@ -63,7 +64,8 @@
             <div class="col-md-2 d-none d-md-block">
               {% for image in product.product_image.all %}
               {% if image.is_feature%}
-              <img class="img-fluid" alt="Responsive image" src="{{ image.image.url }}" alt="{{ image.image.alt_text }}">
+              <img class="img-fluid" alt="Responsive image" src="{{ image.image.url }}"
+                alt="{{ image.image.alt_text }}">
               {% endif %}
               {% endfor %}
             </div>
@@ -96,64 +98,64 @@
     {% endif %}
   </div>
 </section>
-  <script>
-    // Delete Item
-    $(document).on("click", ".delete-button", function (e) {
-      e.preventDefault();
-      var prodid = $(this).data("index");
-      $.ajax({
-        type: "POST",
-        url: '{% url "basket:basket_delete" %}',
-        data: {
-          productid: $(this).data("index"),
-          csrfmiddlewaretoken: "{{csrf_token}}",
-          action: "post",
-        },
-        success: function (json) {
-          $('.product-item[data-index="' + prodid + '"]').remove();
-  
-          if (json.qty == 0) {
-            total = 0
-            subtotal = 0
-          } else {
-            total = (parseFloat(json.subtotal) + 11.50).toFixed(2);
-            subtotal = json.subtotal
-          }
-  
-          document.getElementById("subtotal").innerHTML = subtotal;
-          document.getElementById("basket-qty").innerHTML = json.qty;
-          document.getElementById("total").innerHTML = total;
-          location.reload();
+<script>
+  // Delete Item
+  $(document).on("click", ".delete-button", function (e) {
+    e.preventDefault();
+    var prodid = $(this).data("index");
+    $.ajax({
+      type: "POST",
+      url: '{% url "basket:basket_delete" %}',
+      data: {
+        productid: $(this).data("index"),
+        csrfmiddlewaretoken: "{{csrf_token}}",
+        action: "post",
+      },
+      success: function (json) {
+        $('.product-item[data-index="' + prodid + '"]').remove();
 
-        },
-        error: function (xhr, errmsg, err) {},
-      });
-    });
-  
-    // Update Item
-    $(document).on("click", ".update-button", function (e) {
-      e.preventDefault();
-      var prodid = $(this).data("index");
-      $.ajax({
-        type: "POST",
-        url: '{% url "basket:basket_update" %}',
-        data: {
-          productid: $(this).data("index"),
-          productqty: $("#select" + prodid + " option:selected").text(),
-          csrfmiddlewaretoken: "{{csrf_token}}",
-          action: "post",
-        },
-        success: function (json) {
-  
+        if (json.qty == 0) {
+          total = 0
+          subtotal = 0
+        } else {
           total = (parseFloat(json.subtotal) + 11.50).toFixed(2);
-          document.getElementById("basket-qty").innerHTML = json.qty;
-          document.getElementById("subtotal").innerHTML = json.subtotal;
-          document.getElementById("total").innerHTML = total;
-          location.reload();
-        },
-        error: function (xhr, errmsg, err) {},
-      });
+          subtotal = json.subtotal
+        }
+
+        document.getElementById("subtotal").innerHTML = subtotal;
+        document.getElementById("basket-qty").innerHTML = json.qty;
+        document.getElementById("total").innerHTML = total;
+        location.reload();
+
+      },
+      error: function (xhr, errmsg, err) {},
     });
-  </script>
-  
-  {% endblock %}
+  });
+
+  // Update Item
+  $(document).on("click", ".update-button", function (e) {
+    e.preventDefault();
+    var prodid = $(this).data("index");
+    $.ajax({
+      type: "POST",
+      url: '{% url "basket:basket_update" %}',
+      data: {
+        productid: $(this).data("index"),
+        productqty: $("#select" + prodid + " option:selected").text(),
+        csrfmiddlewaretoken: "{{csrf_token}}",
+        action: "post",
+      },
+      success: function (json) {
+
+        total = (parseFloat(json.subtotal) + 11.50).toFixed(2);
+        document.getElementById("basket-qty").innerHTML = json.qty;
+        document.getElementById("subtotal").innerHTML = json.subtotal;
+        document.getElementById("total").innerHTML = total;
+        location.reload();
+      },
+      error: function (xhr, errmsg, err) {},
+    });
+  });
+</script>
+
+{% endblock %}
