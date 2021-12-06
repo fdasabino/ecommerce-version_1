@@ -49,9 +49,11 @@ def delivery_address(request):
 
     addresses = Address.objects.filter(customer=request.user).order_by("-default")
 
-    if "address" not in request.session:
-        session["address"] = {"address_id": str(addresses[0].id)}
-    else:
+    try:
+        if "address" not in request.session:
+            messages.add_message(request, messages.WARNING, "Please add an address option")
+            session["address"] = {"address_id": str(addresses[0].id)}
+    except:
         session["address"]["address_id"] = str(addresses[0].id)
         session.modified = True
 

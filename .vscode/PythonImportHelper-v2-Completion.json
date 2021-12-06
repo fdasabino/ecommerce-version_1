@@ -1589,7 +1589,7 @@
         "kind": 2,
         "importPath": "checkout.views",
         "description": "checkout.views",
-        "peekOfCode": "def delivery_address(request):\n    session = request.session\n    if \"purchase\" not in request.session:\n        messages.add_message(request, messages.WARNING, \"Please select a delivery option\")\n        return HttpResponseRedirect(request.META[\"HTTP_REFERER\"])\n    addresses = Address.objects.filter(customer=request.user).order_by(\"-default\")\n    if \"address\" not in request.session:\n        session[\"address\"] = {\"address_id\": str(addresses[0].id)}\n    else:\n        session[\"address\"][\"address_id\"] = str(addresses[0].id)",
+        "peekOfCode": "def delivery_address(request):\n    session = request.session\n    if \"purchase\" not in request.session:\n        messages.add_message(request, messages.WARNING, \"Please select a delivery option\")\n        return HttpResponseRedirect(request.META[\"HTTP_REFERER\"])\n    addresses = Address.objects.filter(customer=request.user).order_by(\"-default\")\n    try:\n        if \"address\" not in request.session:\n            messages.add_message(request, messages.WARNING, \"Please add an address option\")\n            session[\"address\"] = {\"address_id\": str(addresses[0].id)}",
         "detail": "checkout.views",
         "documentation": {}
     },
