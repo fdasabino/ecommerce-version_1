@@ -5,76 +5,79 @@
 {% block content %}
 <section>
   <div class="container">
-    <div class="col-12">
-      <h1 class="h2">Your Dashboard</h1>
-    </div>
-    <div class="col-12 d-flex justify-content-between">
-      <div>Manage your <b>orders</b> and personal details</div>
-      <div><a href="{% url 'account:edit_details' %}">Change Details</a></div>
+    <div class="row">
+      <div class="col-12">
+        <h1 class="h3">Your Account</h1>
+      </div>
+      <div class="col-12 d-flex justify-content-between">
+        <div>Manage your <b>orders</b> and personal details</div>
+      </div>
     </div>
     <hr />
-  </div>
-  <div class="container">
-    {% for order in orders %}
-    <div class="row g-3">
 
-      <div class="col-12 bg-light p-3 d-flex justify-content-between">
-        <div class="d-flex d-flex-inline">
-
-          <div class="pe-3">{{ order.created }}</div>
-          <div class="dropdown">
-            <a class="text-reset text-decoration-none dropdown-toggle" href="#" role="link" id="dropdownLink"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Dispacted to
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor"
-                class="bi bi-chevron-down" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
-              </svg>
-            </a>
-
-            <ul class="dropdown-menu" aria-labelledby="dropdownLink">
-              <li class="item small">{{order.full_name}}</li>
-              <li class="item small">{{order.address1}}</li>
-              <li class="item small">{{order.address2}}</li>
-              <li class="item small">{{order.post_code}}</li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="text-end">
-          Total paid: <span class="fw-bold">£{{ order.total_paid }}</span>
-        </div>
-      </div>
-      <div class="col-md-5 col-lg-4 order-md-last p-0 order-3">
-        <div class="d-grid gap-2 ">
-          <button class="btn btn-warning" type="button">Problem with order</button>
-          <button class="btn btn-light" type="button">Leave a review</button>
-        </div>
-      </div>
-
-      <div class="col-md-7 col-lg-8 p-0">
-
-        {% for item in order.items.all %}
-
-        <div class="card mb-3 border-0">
-          <div class="row g-0">
-            <div class="col-md-2 d-none d-md-block">
-              <img class="img-fluid" style="width:90px" src="{{item.product.image.url}}" />
-            </div>
-            <div class="col-md-10">
-              <div class="card-body p-1">
-                <a class="text-decoration-none" href="{{ item.product.get_absolute_url }}">
-                  <p class="card-text small">{{item.product|title}}</p>
-                </a>
+    <div class="justify-content-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <a href="{% url 'account:user_orders' %}" class="text-reset text-decoration-none" role="button" style="max-width: 540px;">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-12">
+                <div class="card-body text-center">
+                  <h1 class="h5">Orders <i class="bi bi-gift"></i></h1>
+                  <p class="card-text small text-muted">View, Track, Change or buy again</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        {% endfor %}
+        </a>
+      </div>
+      <div class="col">
+        <a href="{% url 'account:edit_details' %}" class="text-reset text-decoration-none" role="button"
+          style="max-width: 540px;">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-12">
+                <div class="card-body text-center">
+                  <h1 class="h5">Login & Security <i class="bi bi-lock"></i></h1>
+                  <p class="card-text small text-muted">Edit login, email and phone number</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{% url 'account:addresses' %}" class="text-reset text-decoration-none" role="button"
+          style="max-width: 540px;">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-12">
+                <div class="card-body text-center">
+                  <h1 class="h5">Your Addresses <i class="bi bi-pin-map"></i>
+                  </h1>
+                  <p class="card-text small text-muted">Edit your shipping addresses</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col">
+        <a href="{% url 'account:wishlist' %}" class="text-reset text-decoration-none" role="button"
+          style="max-width: 540px;">
+          <div class="card mb-3">
+            <div class="row g-0">
+              <div class="col-12">
+                <div class="card-body text-center">
+                  <h1 class="h5">Your Wishlist <i class="bi bi-stars"></i>
+                  </h1>
+                  <p class="card-text small text-muted">View items you added to your wishlist</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
     </div>
-    {% endfor %}
   </div>
 </section>
 {% endblock %}

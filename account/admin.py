@@ -1,5 +1,6 @@
 from django.contrib import admin
 
-from .models import UserBase
+from .models import Address, Customer
 
-admin.site.register(UserBase)
+admin.site.register(Customer)
+admin.site.register(Address)

@@ -17,6 +17,12 @@ a {
   text-decoration: none;
 }
 
+/* store */
+.store-select-dropdown {
+  width: 50px;
+  height: 40px;
+}
+
 /* Bootstrap Over-ride */
 @media (min-width: 1000px) {
   .container {
@@ -56,6 +62,17 @@ a {
   color: #000 !important;
 }
 
+.bi-globe {
+  color: rgb(255, 255, 255) !important;
+}
+
+.bg-light {
+  background-color: #C2E5D3 !important;
+}
+
+.logo {
+  font-size: 40px
+}
 
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');

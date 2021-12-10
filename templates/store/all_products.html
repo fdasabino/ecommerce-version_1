@@ -1,43 +1,48 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}All Products{% endblock %}
+{% block title %}Store - Low Prices in Books & more{% endblock %}
 {% block content %}
-
-
 <section>
   <div class="container">
-    <div class="col-12">
-      <h3 class="pb-3">All Products</h3>
+    <div class="alert alert-primary fw600 rounded-0 border-0 pb-3" role="alert">
+      <i class="bi bi-info-circle me-2"></i>
+      COVID-19 - <u>Click here for our latest updates</u> on our stores, website and contact centre. Thank you for
+      your patience and support.
     </div>
-    <div class="col-12 d-flex justify-content-between">
-      <div><b>Popular</b> products purchased</div>
-    </div>
-    <hr />
-  </div>
-  <div class="album py-5 bg-light">
     <div class="container">
-      {% if not products %}
-      <div class="col-12 p-0">There are currently no products active.<a href="/">Back to homepage</a></div>
-      {% else %}
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
-        {% for product in products %}
-        <div class="col">
-          <div class="card shadow-sm">
-            <img class="img-fluid" alt="Responsive image" src="{{ product.image.url }}">
-            <div class="card-body">
-              <p class="card-text">
-                <a class="text-dark text-decoration-none" href="{{ product.get_absolute_url }}">{{ product.title }}</a>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <small class="text-muted">9min read</small>
+      <div class="row">
+        <div class="album py-5">
+          <div class="mb-3">
+            <h1 class="h3">Popular</h1>
+          </div>
+          {% if not products %}
+          <div class="col-12">There are currently no products active</div>
+          {% else %}
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+            {% for product in products %}
+            <div class="col">
+              <div class="card border-0">
+                {% for image in product.product_image.all %}
+                {% if image.is_feature%}
+                <img class="img-fluid" alt="Responsive image" src="{{ image.image.url }}"
+                  alt="{{ image.image.alt_text }}">
+                {% endif %}
+                {% endfor %}
+                <div class="card-body px-0">
+                  <p class="card-text text-center">
+                    <a class="text-dark text-decoration-none"
+                      href="{{ product.get_absolute_url }}">{{ product.title}}</a>
+                  </p>
+                  <div class="fw-bold text-center">£{{product.regular_price}}</div>
+                </div>
               </div>
             </div>
+            {% endfor %}
           </div>
+          {% endif %}
         </div>
-        {% endfor %}
       </div>
-      {% endif %}
     </div>
-  </div>
 </section>
+
 {% endblock %}

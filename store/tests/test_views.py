@@ -6,7 +6,6 @@ from django.contrib.auth.models import User
 from django.http import HttpRequest
 from django.test import Client, TestCase
 from django.urls import reverse
-
 from store.models import Category, Product
 from store.views import product_all
 
@@ -58,9 +57,7 @@ class TestViewResponses(TestCase):
         """
         Test items response status
         """
-        response = self.c.get(
-            reverse("store:product_detail", args=["django-beginners"])
-        )
+        response = self.c.get(reverse("store:product_detail", args=["django-beginners"]))
         self.assertEqual(response.status_code, 200)
 
     def test_homepage_html(self):

@@ -8,8 +8,9 @@
 }
 
 .toast {
+  background-color: #fff !important;
   position: fixed;
-  top: calc(5rem - 4px);
+  top: 0;
   right: 0;
 }
 
